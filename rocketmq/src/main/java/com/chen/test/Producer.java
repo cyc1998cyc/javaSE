@@ -21,7 +21,7 @@ public class Producer {
         //创建一个生产者，指定生产者组为sanyouProducer
         DefaultMQProducer producer = new DefaultMQProducer("sanyouProducer");
 
-        producer.setNamesrvAddr("127.0.0.1:9876");
+        producer.setNamesrvAddr("192.168.5.133:9876");
 
         producer.setSendMsgTimeout(60000);
 

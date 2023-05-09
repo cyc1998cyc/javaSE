@@ -19,7 +19,7 @@ public class Consumer {
     public static void main(String[] args) throws MQClientException {
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("sanyouConsumer");
 
-        consumer.setNamesrvAddr("127.0.0.1:9876");
+        consumer.setNamesrvAddr("192.168.5.133:9876");
 
         consumer.subscribe("sanyouTopic", "*");
 
