@@ -1,6 +1,7 @@
 package com.chen;
 
 import com.chen.constant.MqConstant;
+import net.bytebuddy.asm.Advice;
 import org.apache.rocketmq.client.consumer.DefaultLitePullConsumer;
 import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
 import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyContext;
@@ -15,7 +16,10 @@ import org.apache.rocketmq.common.message.Message;
 import org.apache.rocketmq.common.message.MessageExt;
 import org.apache.rocketmq.remoting.exception.RemotingException;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.jdbc.core.JdbcTemplate;
+import sun.security.action.PutAllAction;
 
 import java.util.*;
 
@@ -265,6 +269,48 @@ class Rocketmq2ApplicationTests {
 
 
     }
+
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
+
+    @Test
+    public void repeatProducerTest() throws Exception {
+        DefaultMQProducer producer = new DefaultMQProducer("repeat-producer-test");
+        producer.setNamesrvAddr(MqConstant.NAME_SRV_ADDR);
+        producer.start();
+        String key = "12331132";
+        Message message = new Message("repeatTopic", null, key, "扣减库存-1".getBytes());
+        Message message2 = new Message("repeatTopic", null, key, "扣减库存-1".getBytes());
+        producer.send(message);
+        producer.send(message2);
+        System.out.println("发送成功");
+        producer.shutdown();
+
+    }
+
+    @Test
+    public void repeatConsumer() throws Exception {
+        DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("repeat-consumer-test");
+        consumer.setNamesrvAddr(MqConstant.NAME_SRV_ADDR);
+        consumer.subscribe("repeatTopic", "*");
+        consumer.registerMessageListener(new MessageListenerConcurrently() {
+            @Override
+            public ConsumeConcurrentlyStatus consumeMessage(List<MessageExt> list, ConsumeConcurrentlyContext consumeConcurrentlyContext) {
+                MessageExt messageExt = list.get(0);
+                String keys = messageExt.getKeys();
+                int i = jdbcTemplate.update("insert into emp (`id`,`name`,`age`) values(?,'张三','45') ", keys);
+                System.out.println(messageExt.getBody());
+                System.out.println(i);
+
+                return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
+            }
+        });
+        consumer.start();
+        System.in.read();
+
+
+    }
+
 
 
 }
