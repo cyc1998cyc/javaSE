@@ -1,0 +1,22 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 1812244d
+    url: jdbc:mysql://localhost:3306/sec-kill?serverTimezone=GMT%2B8&useSLL=false
+
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+
+rocketmq:
+  name-server: 192.168.247.128:9876
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
