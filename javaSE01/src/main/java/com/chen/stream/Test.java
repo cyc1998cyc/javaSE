@@ -2,9 +2,9 @@ package com.chen.stream;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
-import java.util.function.Consumer;
+import java.util.Optional;
+import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -20,10 +20,14 @@ public class Test {
 //                .filter(auther -> auther.getAge()<1)
 //                .forEach(auther -> System.out.println(auther.getName()));
 //        test11();
-        test12();
-
+//        test12();
+//        test14();
+//        test15();
+//        test17();
+        test18();
 
     }
+
 
     private static List<Auther> getAuther() {
 
@@ -53,6 +57,10 @@ public class Test {
 
 
         return authers;
+    }
+
+    private static Auther getOneAuther() {
+        return new Auther(12L, "陈宇超", 14, "好看", new ArrayList<Book>());
     }
 
     public static void test08() {
@@ -101,6 +109,72 @@ public class Test {
                 .collect(Collectors.toList()));
 
 
+    }
+
+    public static void test13() {
+        //获取一个map集合，key为作者名，value为List<Book>
+        System.out.println(getAuther().stream()
+                .distinct()
+                .collect(Collectors.toMap(Auther::getName, Auther::getBooks)));
+    }
+
+    /**
+     * 判断是否有年龄在29以上的作家
+     * allMatch noMatch 一样
+     */
+    public static void test14() {
+        System.out.println(getAuther().stream()
+                .anyMatch(auther -> {
+                    if (auther.getAge() < 13) {
+                        return true;
+                    }
+                    return false;
+                }));
+
+    }
+
+    /**
+     * 获取任意一个大于18岁的作家，如果存在输出他的名字
+     */
+    public static void test15() {
+        Optional<Auther> autherOptional = getAuther().stream()
+                .filter(auther -> auther.getAge() > 18)
+                .findAny();
+
+        autherOptional.ifPresent(auther -> System.out.println(auther.getName()));
+
+    }
+
+    /**
+     * 使用reduce求所有作者的年龄的和
+     */
+    public static void test16() {
+        System.out.println(getAuther().stream()
+                .map(auther -> auther.getAge())
+                .reduce(0, (integer, integer2) -> integer + integer2));
+
+    }
+
+    /**
+     * 使用reduce求所有作者中的年龄最大值
+     */
+    public static void test17() {
+        System.out.println(getAuther().stream()
+                .map(auther -> auther.getAge())
+                .reduce(Integer.MIN_VALUE, new BinaryOperator<Integer>() {
+                    @Override
+                    public Integer apply(Integer integer, Integer integer2) {
+
+                        return integer < integer2 ? integer2 : integer;
+                    }
+                }));
+
+    }
+
+    public static void test18() {
+        Auther auther = getOneAuther();
+        Optional<Auther> autherOptional = Optional.ofNullable(auther);
+        autherOptional.ifPresent(auther1 -> System.out.println(auther.getName()));
     }
 
 
