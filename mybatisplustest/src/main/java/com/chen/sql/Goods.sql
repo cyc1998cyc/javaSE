@@ -1,0 +1,9 @@
+-- auto Generated on 2023-07-05
+-- DROP TABLE IF EXISTS goods;
+CREATE TABLE goods(
+  id VARCHAR (50) NOT NULL COMMENT '商品id',
+  `name` VARCHAR (50) NOT NULL DEFAULT '' COMMENT '商品名称',
+  price DECIMAL (13,4) NOT NULL DEFAULT -1 COMMENT '商品价格',
+  num INT (11) NOT NULL DEFAULT -1 COMMENT '商品数量',
+  PRIMARY KEY (id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT 'goods';
