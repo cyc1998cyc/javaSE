@@ -4,45 +4,43 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import java.io.Serializable;
-import java.util.Date;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
 /**
-    * user
-    */
+ * user
+ */
 @Data
 @TableName(value = "`user`")
 public class User implements Serializable {
     /**
-     * 主键
+     * userId
      */
-    @TableId(value = "id", type = IdType.INPUT)
-    private String id;
+    @TableId(value = "user_id", type = IdType.INPUT)
+    private Integer userId;
 
     /**
-     * 用户名
+     * userName
      */
     @TableField(value = "user_name")
     private String userName;
 
     /**
-     * 密码
-     */
-    @TableField(value = "`password`")
-    private String password;
-
-    /**
-     * 手机号
-     */
-    @TableField(value = "phone_num")
-    private String phoneNum;
-
-    /**
-     * 出生日期
+     * birth
      */
     @TableField(value = "birth")
-    private Date birth;
+    @JsonFormat(pattern = "yyyy年MM月dd日 HH:mm:ss", timezone = "Asia/Shanghai")
+    private LocalDateTime birth;
+
+    /**
+     * salary
+     */
+    @TableField(value = "salary")
+    private BigDecimal salary;
 
     private static final long serialVersionUID = 1L;
 }
