@@ -22,9 +22,6 @@ public class ThreadPoolConfig {
             final AtomicInteger count = new AtomicInteger(0);
             @Override
             public Thread newThread(@NotNull Runnable r) {
-                System.out.println("------------------------");
-                System.out.println(count.get());
-                System.out.println("------------------------");
                 return new Thread(r,"测试线程"+count.addAndGet(1));
             }
         },new ThreadPoolExecutor.AbortPolicy());
