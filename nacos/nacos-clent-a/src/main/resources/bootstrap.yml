@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: nacos-client-a
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      username: nacos
+      password: nacos
+      discovery:
+        namespace: a734f710-9b36-41fe-8147-8a9369e16b83
+        group: A_GROUP
+
+      config:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+        namespace: a734f710-9b36-41fe-8147-8a9369e16b83
+        group: A_GROUP
+        prefix: nacos-config-a
+        file-extension: yml
+server:
+  port: 8080

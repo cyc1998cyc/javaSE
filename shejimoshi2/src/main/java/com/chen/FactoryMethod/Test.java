@@ -13,20 +13,19 @@ public class Test {
 }
 
 
-
-interface Coffee{
-
-}
-
-class MeishiCoffee implements Coffee{
+interface Coffee {
 
 }
 
-interface CoffeeFactory{
+class MeishiCoffee implements Coffee {
+
+}
+
+interface CoffeeFactory {
     Coffee create();
 }
 
-class MeiShiCoffeeFactory implements CoffeeFactory{
+class MeiShiCoffeeFactory implements CoffeeFactory {
 
     @Override
     public Coffee create() {
