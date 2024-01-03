@@ -16,9 +16,13 @@ public class RedisTestController {
     @Autowired
     private RedisTemplate redisTemplate;
 
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
+
     @RequestMapping("/test")
     public String test(){
-        String name = (String) redisTemplate.opsForValue().get("name");
+        stringRedisTemplate.opsForValue().set("name","chenyuchao");
+        String name = stringRedisTemplate.opsForValue().get("name");
         return name;
     }
 
