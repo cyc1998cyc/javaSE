@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: nacos-client-a
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      username: nacos
+      password: nacos
+server:
+  port: 8080
+
