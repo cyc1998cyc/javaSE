@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chen.mapper.EasyConfirmDataRepaymentMapper">
+  <resultMap id="BaseResultMap" type="com.chen.entity.EasyConfirmDataRepayment">
+    <!--@mbg.generated-->
+    <!--@Table easy_confirm_data_repayment-->
+    <id column="easy_confirm_data_repayment_id" jdbcType="BIGINT" property="easyConfirmDataRepaymentId" />
+    <result column="bank" jdbcType="VARCHAR" property="bank" />
+    <result column="xaccount" jdbcType="VARCHAR" property="xaccount" />
+    <result column="card_nbr" jdbcType="VARCHAR" property="cardNbr" />
+    <result column="cardholder" jdbcType="VARCHAR" property="cardholder" />
+    <result column="inp_day" jdbcType="VARCHAR" property="inpDay" />
+    <result column="inp_time" jdbcType="VARCHAR" property="inpTime" />
+    <result column="micro_ref" jdbcType="VARCHAR" property="microRef" />
+    <result column="purch_day" jdbcType="VARCHAR" property="purchDay" />
+    <result column="prod_id" jdbcType="VARCHAR" property="prodId" />
+    <result column="int_rate" jdbcType="DECIMAL" property="intRate" />
+    <result column="accel_int" jdbcType="DECIMAL" property="accelInt" />
+    <result column="first_int" jdbcType="DECIMAL" property="firstInt" />
+    <result column="mth_instl" jdbcType="DECIMAL" property="mthInstl" />
+    <result column="instl_cnt" jdbcType="VARCHAR" property="instlCnt" />
+    <result column="lst_instdy" jdbcType="VARCHAR" property="lstInstdy" />
+    <result column="mth_int" jdbcType="DECIMAL" property="mthInt" />
+    <result column="mth_ppl" jdbcType="DECIMAL" property="mthPpl" />
+    <result column="nbr_mths" jdbcType="VARCHAR" property="nbrMths" />
+    <result column="orig_purch" jdbcType="DECIMAL" property="origPurch" />
+    <result column="rem_ppl" jdbcType="DECIMAL" property="remPpl" />
+    <result column="orig_int" jdbcType="DECIMAL" property="origInt" />
+    <result column="tot_int_cg" jdbcType="DECIMAL" property="totIntCg" />
+    <result column="rem_int" jdbcType="DECIMAL" property="remInt" />
+    <result column="orig_fee" jdbcType="DECIMAL" property="origFee" />
+    <result column="rem_fee" jdbcType="DECIMAL" property="remFee" />
+    <result column="trans_src" jdbcType="VARCHAR" property="transSrc" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="status_day" jdbcType="VARCHAR" property="statusDay" />
+    <result column="employee" jdbcType="VARCHAR" property="employee" />
+    <result column="credp_id" jdbcType="VARCHAR" property="credpId" />
+    <result column="mp_type" jdbcType="VARCHAR" property="mpType" />
+    <result column="pause_nbrs" jdbcType="VARCHAR" property="pauseNbrs" />
+    <result column="delay_mth" jdbcType="VARCHAR" property="delayMth" />
+    <result column="curr_num" jdbcType="VARCHAR" property="currNum" />
+    <result column="res_ppl" jdbcType="DECIMAL" property="resPpl" />
+    <result column="inter_mths" jdbcType="VARCHAR" property="interMths" />
+    <result column="paycf_day" jdbcType="VARCHAR" property="paycfDay" />
+    <result column="pri_dldy" jdbcType="VARCHAR" property="priDldy" />
+    <result column="dly_days" jdbcType="VARCHAR" property="dlyDays" />
+    <result column="etl_day" jdbcType="VARCHAR" property="etlDay" />
+    <result column="dedu_fee" jdbcType="DECIMAL" property="deduFee" />
+    <result column="app_sday_new" jdbcType="VARCHAR" property="appSdayNew" />
+    <result column="mark_day" jdbcType="VARCHAR" property="markDay" />
+    <result column="rem_feey" jdbcType="DECIMAL" property="remFeey" />
+    <result column="fee_pcnt" jdbcType="DECIMAL" property="feePcnt" />
+    <result column="fee_mths" jdbcType="VARCHAR" property="feeMths" />
+    <result column="chanelno" jdbcType="VARCHAR" property="chanelno" />
+    <result column="mp_irr_yr" jdbcType="DECIMAL" property="mpIrrYr" />
+    <result column="rem_pply" jdbcType="DECIMAL" property="remPply" />
+    <result column="res_pply" jdbcType="DECIMAL" property="resPply" />
+    <result column="fst_instdy" jdbcType="VARCHAR" property="fstInstdy" />
+    <result column="mth_fee" jdbcType="DECIMAL" property="mthFee" />
+    <result column="fee_pcnt_new" jdbcType="DECIMAL" property="feePcntNew" />
+    <result column="rem_inty" jdbcType="DECIMAL" property="remInty" />
+    <result column="inst_intfe" jdbcType="DECIMAL" property="instIntfe" />
+    <result column="txt_date" jdbcType="DATE" property="txtDate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    easy_confirm_data_repayment_id, bank, xaccount, card_nbr, cardholder, inp_day, inp_time, 
+    micro_ref, purch_day, prod_id, int_rate, accel_int, first_int, mth_instl, instl_cnt, 
+    lst_instdy, mth_int, mth_ppl, nbr_mths, orig_purch, rem_ppl, orig_int, tot_int_cg, 
+    rem_int, orig_fee, rem_fee, trans_src, `status`, status_day, employee, credp_id, 
+    mp_type, pause_nbrs, delay_mth, curr_num, res_ppl, inter_mths, paycf_day, pri_dldy, 
+    dly_days, etl_day, dedu_fee, app_sday_new, mark_day, rem_feey, fee_pcnt, fee_mths, 
+    chanelno, mp_irr_yr, rem_pply, res_pply, fst_instdy, mth_fee, fee_pcnt_new, rem_inty, 
+    inst_intfe, txt_date
+  </sql>
+  <update id="updateBatch" parameterType="java.util.List">
+    <!--@mbg.generated-->
+    update easy_confirm_data_repayment
+    <trim prefix="set" suffixOverrides=",">
+      <trim prefix="bank = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.bank,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="xaccount = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.xaccount,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="card_nbr = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.cardNbr,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="cardholder = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.cardholder,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="inp_day = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.inpDay,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="inp_time = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.inpTime,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="micro_ref = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.microRef,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="purch_day = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.purchDay,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="prod_id = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.prodId,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="int_rate = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.intRate,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="accel_int = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.accelInt,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="first_int = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.firstInt,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="mth_instl = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.mthInstl,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="instl_cnt = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.instlCnt,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="lst_instdy = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.lstInstdy,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="mth_int = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.mthInt,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="mth_ppl = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.mthPpl,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="nbr_mths = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.nbrMths,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="orig_purch = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.origPurch,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="rem_ppl = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.remPpl,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="orig_int = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.origInt,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="tot_int_cg = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.totIntCg,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="rem_int = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.remInt,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="orig_fee = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.origFee,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="rem_fee = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.remFee,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="trans_src = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.transSrc,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="`status` = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.status,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="status_day = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.statusDay,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="employee = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.employee,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="credp_id = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.credpId,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="mp_type = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.mpType,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="pause_nbrs = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.pauseNbrs,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="delay_mth = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.delayMth,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="curr_num = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.currNum,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="res_ppl = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.resPpl,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="inter_mths = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.interMths,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="paycf_day = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.paycfDay,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="pri_dldy = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.priDldy,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="dly_days = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.dlyDays,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="etl_day = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.etlDay,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="dedu_fee = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.deduFee,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="app_sday_new = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.appSdayNew,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="mark_day = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.markDay,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="rem_feey = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.remFeey,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="fee_pcnt = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.feePcnt,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="fee_mths = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.feeMths,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="chanelno = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.chanelno,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="mp_irr_yr = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.mpIrrYr,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="rem_pply = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.remPply,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="res_pply = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.resPply,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="fst_instdy = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.fstInstdy,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="mth_fee = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.mthFee,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="fee_pcnt_new = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.feePcntNew,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="rem_inty = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.remInty,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="inst_intfe = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.instIntfe,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="txt_date = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when easy_confirm_data_repayment_id = #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT} then #{item.txtDate,jdbcType=DATE}
+        </foreach>
+      </trim>
+    </trim>
+    where easy_confirm_data_repayment_id in
+    <foreach close=")" collection="list" item="item" open="(" separator=", ">
+      #{item.easyConfirmDataRepaymentId,jdbcType=BIGINT}
+    </foreach>
+  </update>
+  <insert id="batchInsert" parameterType="map">
+    <!--@mbg.generated-->
+    insert into easy_confirm_data_repayment
+    (easy_confirm_data_repayment_id, bank, xaccount, card_nbr, cardholder, inp_day, inp_time, 
+      micro_ref, purch_day, prod_id, int_rate, accel_int, first_int, mth_instl, instl_cnt, 
+      lst_instdy, mth_int, mth_ppl, nbr_mths, orig_purch, rem_ppl, orig_int, tot_int_cg, 
+      rem_int, orig_fee, rem_fee, trans_src, `status`, status_day, employee, credp_id, 
+      mp_type, pause_nbrs, delay_mth, curr_num, res_ppl, inter_mths, paycf_day, pri_dldy, 
+      dly_days, etl_day, dedu_fee, app_sday_new, mark_day, rem_feey, fee_pcnt, fee_mths, 
+      chanelno, mp_irr_yr, rem_pply, res_pply, fst_instdy, mth_fee, fee_pcnt_new, rem_inty, 
+      inst_intfe, txt_date)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.easyConfirmDataRepaymentId,jdbcType=BIGINT}, #{item.bank,jdbcType=VARCHAR}, 
+        #{item.xaccount,jdbcType=VARCHAR}, #{item.cardNbr,jdbcType=VARCHAR}, #{item.cardholder,jdbcType=VARCHAR}, 
+        #{item.inpDay,jdbcType=VARCHAR}, #{item.inpTime,jdbcType=VARCHAR}, #{item.microRef,jdbcType=VARCHAR}, 
+        #{item.purchDay,jdbcType=VARCHAR}, #{item.prodId,jdbcType=VARCHAR}, #{item.intRate,jdbcType=DECIMAL}, 
+        #{item.accelInt,jdbcType=DECIMAL}, #{item.firstInt,jdbcType=DECIMAL}, #{item.mthInstl,jdbcType=DECIMAL}, 
+        #{item.instlCnt,jdbcType=VARCHAR}, #{item.lstInstdy,jdbcType=VARCHAR}, #{item.mthInt,jdbcType=DECIMAL}, 
+        #{item.mthPpl,jdbcType=DECIMAL}, #{item.nbrMths,jdbcType=VARCHAR}, #{item.origPurch,jdbcType=DECIMAL}, 
+        #{item.remPpl,jdbcType=DECIMAL}, #{item.origInt,jdbcType=DECIMAL}, #{item.totIntCg,jdbcType=DECIMAL}, 
+        #{item.remInt,jdbcType=DECIMAL}, #{item.origFee,jdbcType=DECIMAL}, #{item.remFee,jdbcType=DECIMAL}, 
+        #{item.transSrc,jdbcType=VARCHAR}, #{item.status,jdbcType=VARCHAR}, #{item.statusDay,jdbcType=VARCHAR}, 
+        #{item.employee,jdbcType=VARCHAR}, #{item.credpId,jdbcType=VARCHAR}, #{item.mpType,jdbcType=VARCHAR}, 
+        #{item.pauseNbrs,jdbcType=VARCHAR}, #{item.delayMth,jdbcType=VARCHAR}, #{item.currNum,jdbcType=VARCHAR}, 
+        #{item.resPpl,jdbcType=DECIMAL}, #{item.interMths,jdbcType=VARCHAR}, #{item.paycfDay,jdbcType=VARCHAR}, 
+        #{item.priDldy,jdbcType=VARCHAR}, #{item.dlyDays,jdbcType=VARCHAR}, #{item.etlDay,jdbcType=VARCHAR}, 
+        #{item.deduFee,jdbcType=DECIMAL}, #{item.appSdayNew,jdbcType=VARCHAR}, #{item.markDay,jdbcType=VARCHAR}, 
+        #{item.remFeey,jdbcType=DECIMAL}, #{item.feePcnt,jdbcType=DECIMAL}, #{item.feeMths,jdbcType=VARCHAR}, 
+        #{item.chanelno,jdbcType=VARCHAR}, #{item.mpIrrYr,jdbcType=DECIMAL}, #{item.remPply,jdbcType=DECIMAL}, 
+        #{item.resPply,jdbcType=DECIMAL}, #{item.fstInstdy,jdbcType=VARCHAR}, #{item.mthFee,jdbcType=DECIMAL}, 
+        #{item.feePcntNew,jdbcType=DECIMAL}, #{item.remInty,jdbcType=DECIMAL}, #{item.instIntfe,jdbcType=DECIMAL}, 
+        #{item.txtDate,jdbcType=DATE})
+    </foreach>
+  </insert>
+</mapper>

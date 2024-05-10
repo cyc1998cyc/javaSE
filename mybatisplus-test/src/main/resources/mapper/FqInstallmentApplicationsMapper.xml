@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chen.mapper.FqInstallmentApplicationsMapper">
+  <resultMap id="BaseResultMap" type="com.chen.entity.FqInstallmentApplications">
+    <!--@mbg.generated-->
+    <!--@Table fq_installment_applications-->
+    <id column="fq_installment_applications_id" jdbcType="BIGINT" property="fqInstallmentApplicationsId" />
+    <result column="card_nbr" jdbcType="VARCHAR" property="cardNbr" />
+    <result column="custr_nbr" jdbcType="VARCHAR" property="custrNbr" />
+    <result column="account" jdbcType="VARCHAR" property="account" />
+    <result column="cardholder" jdbcType="VARCHAR" property="cardholder" />
+    <result column="micro_no" jdbcType="VARCHAR" property="microNo" />
+    <result column="prod_id" jdbcType="VARCHAR" property="prodId" />
+    <result column="mp_amt" jdbcType="DECIMAL" property="mpAmt" />
+    <result column="mp_instl" jdbcType="DECIMAL" property="mpInstl" />
+    <result column="nbr_mths" jdbcType="VARCHAR" property="nbrMths" />
+    <result column="mpau_sts" jdbcType="VARCHAR" property="mpauSts" />
+    <result column="status_day" jdbcType="VARCHAR" property="statusDay" />
+    <result column="deccan_rea" jdbcType="VARCHAR" property="deccanRea" />
+    <result column="auth_day" jdbcType="VARCHAR" property="authDay" />
+    <result column="auth_emp" jdbcType="VARCHAR" property="authEmp" />
+    <result column="auth_time" jdbcType="VARCHAR" property="authTime" />
+    <result column="match_day" jdbcType="VARCHAR" property="matchDay" />
+    <result column="preauth_dy" jdbcType="VARCHAR" property="preauthDy" />
+    <result column="preauth_tm" jdbcType="VARCHAR" property="preauthTm" />
+    <result column="inp_empno" jdbcType="VARCHAR" property="inpEmpno" />
+    <result column="curr_num" jdbcType="VARCHAR" property="currNum" />
+    <result column="dedu_fee" jdbcType="DECIMAL" property="deduFee" />
+    <result column="app_sday_new" jdbcType="VARCHAR" property="appSdayNew" />
+    <result column="chanelno" jdbcType="VARCHAR" property="chanelno" />
+    <result column="fee_pcnt" jdbcType="DECIMAL" property="feePcnt" />
+    <result column="feepcnt_pn" jdbcType="DECIMAL" property="feepcntPn" />
+    <result column="bal_mp_amt" jdbcType="DECIMAL" property="balMpAmt" />
+    <result column="bal_mp_amt_flg" jdbcType="VARCHAR" property="balMpAmtFlg" />
+    <result column="txt_date" jdbcType="DATE" property="txtDate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    fq_installment_applications_id, card_nbr, custr_nbr, account, cardholder, micro_no, 
+    prod_id, mp_amt, mp_instl, nbr_mths, mpau_sts, status_day, deccan_rea, auth_day, 
+    auth_emp, auth_time, match_day, preauth_dy, preauth_tm, inp_empno, curr_num, dedu_fee, 
+    app_sday_new, chanelno, fee_pcnt, feepcnt_pn, bal_mp_amt, bal_mp_amt_flg, txt_date
+  </sql>
+  <update id="updateBatch" parameterType="java.util.List">
+    <!--@mbg.generated-->
+    update fq_installment_applications
+    <trim prefix="set" suffixOverrides=",">
+      <trim prefix="card_nbr = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.cardNbr,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="custr_nbr = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.custrNbr,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="account = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.account,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="cardholder = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.cardholder,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="micro_no = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.microNo,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="prod_id = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.prodId,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="mp_amt = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.mpAmt,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="mp_instl = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.mpInstl,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="nbr_mths = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.nbrMths,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="mpau_sts = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.mpauSts,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="status_day = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.statusDay,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="deccan_rea = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.deccanRea,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="auth_day = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.authDay,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="auth_emp = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.authEmp,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="auth_time = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.authTime,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="match_day = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.matchDay,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="preauth_dy = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.preauthDy,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="preauth_tm = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.preauthTm,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="inp_empno = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.inpEmpno,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="curr_num = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.currNum,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="dedu_fee = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.deduFee,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="app_sday_new = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.appSdayNew,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="chanelno = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.chanelno,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="fee_pcnt = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.feePcnt,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="feepcnt_pn = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.feepcntPn,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="bal_mp_amt = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.balMpAmt,jdbcType=DECIMAL}
+        </foreach>
+      </trim>
+      <trim prefix="bal_mp_amt_flg = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.balMpAmtFlg,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="txt_date = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=BIGINT} then #{item.txtDate,jdbcType=DATE}
+        </foreach>
+      </trim>
+    </trim>
+    where fq_installment_applications_id in
+    <foreach close=")" collection="list" item="item" open="(" separator=", ">
+      #{item.fqInstallmentApplicationsId,jdbcType=BIGINT}
+    </foreach>
+  </update>
+  <insert id="batchInsert" parameterType="map">
+    <!--@mbg.generated-->
+    insert into fq_installment_applications
+    (fq_installment_applications_id, card_nbr, custr_nbr, account, cardholder, micro_no, 
+      prod_id, mp_amt, mp_instl, nbr_mths, mpau_sts, status_day, deccan_rea, auth_day, 
+      auth_emp, auth_time, match_day, preauth_dy, preauth_tm, inp_empno, curr_num, dedu_fee, 
+      app_sday_new, chanelno, fee_pcnt, feepcnt_pn, bal_mp_amt, bal_mp_amt_flg, txt_date
+      )
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.fqInstallmentApplicationsId,jdbcType=BIGINT}, #{item.cardNbr,jdbcType=VARCHAR}, 
+        #{item.custrNbr,jdbcType=VARCHAR}, #{item.account,jdbcType=VARCHAR}, #{item.cardholder,jdbcType=VARCHAR}, 
+        #{item.microNo,jdbcType=VARCHAR}, #{item.prodId,jdbcType=VARCHAR}, #{item.mpAmt,jdbcType=DECIMAL}, 
+        #{item.mpInstl,jdbcType=DECIMAL}, #{item.nbrMths,jdbcType=VARCHAR}, #{item.mpauSts,jdbcType=VARCHAR}, 
+        #{item.statusDay,jdbcType=VARCHAR}, #{item.deccanRea,jdbcType=VARCHAR}, #{item.authDay,jdbcType=VARCHAR}, 
+        #{item.authEmp,jdbcType=VARCHAR}, #{item.authTime,jdbcType=VARCHAR}, #{item.matchDay,jdbcType=VARCHAR}, 
+        #{item.preauthDy,jdbcType=VARCHAR}, #{item.preauthTm,jdbcType=VARCHAR}, #{item.inpEmpno,jdbcType=VARCHAR}, 
+        #{item.currNum,jdbcType=VARCHAR}, #{item.deduFee,jdbcType=DECIMAL}, #{item.appSdayNew,jdbcType=VARCHAR}, 
+        #{item.chanelno,jdbcType=VARCHAR}, #{item.feePcnt,jdbcType=DECIMAL}, #{item.feepcntPn,jdbcType=DECIMAL}, 
+        #{item.balMpAmt,jdbcType=DECIMAL}, #{item.balMpAmtFlg,jdbcType=VARCHAR}, #{item.txtDate,jdbcType=DATE}
+        )
+    </foreach>
+  </insert>
+</mapper>
