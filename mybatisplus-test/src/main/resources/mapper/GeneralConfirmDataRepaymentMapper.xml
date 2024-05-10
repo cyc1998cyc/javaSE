@@ -73,6 +73,647 @@
     fee_mths, chanelno, mp_irr_yr, rem_pply, res_pply, fst_instdy, mth_fee, fee_pcnt_new, 
     rem_inty, inst_intfe, txt_date
   </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from general_confirm_data_repayment
+    where general_confirm_data_repayment_id = #{generalConfirmDataRepaymentId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    <!--@mbg.generated-->
+    delete from general_confirm_data_repayment
+    where general_confirm_data_repayment_id = #{generalConfirmDataRepaymentId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.chen.entity.GeneralConfirmDataRepayment">
+    <!--@mbg.generated-->
+    insert into general_confirm_data_repayment (general_confirm_data_repayment_id, bank, 
+      xaccount, card_nbr, cardholder, 
+      inp_day, inp_time, micro_ref, 
+      purch_day, prod_id, int_rate, 
+      accel_int, first_int, mth_instl, 
+      instl_cnt, lst_instdy, mth_int, 
+      mth_ppl, nbr_mths, orig_purch, 
+      rem_ppl, orig_int, tot_int_cg, 
+      rem_int, orig_fee, rem_fee, 
+      trans_src, `status`, status_day, 
+      employee, credp_id, mp_type, 
+      pause_nbrs, delay_mth, curr_num, 
+      res_ppl, inter_mths, paycf_day, 
+      pri_dldy, dly_days, etl_day, 
+      dedu_fee, app_sday_new, mark_day, 
+      rem_feey, fee_pcnt, fee_mths, 
+      chanelno, mp_irr_yr, rem_pply, 
+      res_pply, fst_instdy, mth_fee, 
+      fee_pcnt_new, rem_inty, inst_intfe, 
+      txt_date)
+    values (#{generalConfirmDataRepaymentId,jdbcType=BIGINT}, #{bank,jdbcType=VARCHAR}, 
+      #{xaccount,jdbcType=VARCHAR}, #{cardNbr,jdbcType=VARCHAR}, #{cardholder,jdbcType=VARCHAR}, 
+      #{inpDay,jdbcType=VARCHAR}, #{inpTime,jdbcType=VARCHAR}, #{microRef,jdbcType=VARCHAR}, 
+      #{purchDay,jdbcType=VARCHAR}, #{prodId,jdbcType=VARCHAR}, #{intRate,jdbcType=DECIMAL}, 
+      #{accelInt,jdbcType=DECIMAL}, #{firstInt,jdbcType=DECIMAL}, #{mthInstl,jdbcType=DECIMAL}, 
+      #{instlCnt,jdbcType=VARCHAR}, #{lstInstdy,jdbcType=VARCHAR}, #{mthInt,jdbcType=DECIMAL}, 
+      #{mthPpl,jdbcType=DECIMAL}, #{nbrMths,jdbcType=VARCHAR}, #{origPurch,jdbcType=DECIMAL}, 
+      #{remPpl,jdbcType=DECIMAL}, #{origInt,jdbcType=DECIMAL}, #{totIntCg,jdbcType=DECIMAL}, 
+      #{remInt,jdbcType=DECIMAL}, #{origFee,jdbcType=DECIMAL}, #{remFee,jdbcType=DECIMAL}, 
+      #{transSrc,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{statusDay,jdbcType=VARCHAR}, 
+      #{employee,jdbcType=VARCHAR}, #{credpId,jdbcType=VARCHAR}, #{mpType,jdbcType=VARCHAR}, 
+      #{pauseNbrs,jdbcType=VARCHAR}, #{delayMth,jdbcType=VARCHAR}, #{currNum,jdbcType=VARCHAR}, 
+      #{resPpl,jdbcType=DECIMAL}, #{interMths,jdbcType=VARCHAR}, #{paycfDay,jdbcType=VARCHAR}, 
+      #{priDldy,jdbcType=VARCHAR}, #{dlyDays,jdbcType=VARCHAR}, #{etlDay,jdbcType=VARCHAR}, 
+      #{deduFee,jdbcType=DECIMAL}, #{appSdayNew,jdbcType=VARCHAR}, #{markDay,jdbcType=VARCHAR}, 
+      #{remFeey,jdbcType=DECIMAL}, #{feePcnt,jdbcType=DECIMAL}, #{feeMths,jdbcType=VARCHAR}, 
+      #{chanelno,jdbcType=VARCHAR}, #{mpIrrYr,jdbcType=DECIMAL}, #{remPply,jdbcType=DECIMAL}, 
+      #{resPply,jdbcType=DECIMAL}, #{fstInstdy,jdbcType=VARCHAR}, #{mthFee,jdbcType=DECIMAL}, 
+      #{feePcntNew,jdbcType=DECIMAL}, #{remInty,jdbcType=DECIMAL}, #{instIntfe,jdbcType=DECIMAL}, 
+      #{txtDate,jdbcType=DATE})
+  </insert>
+  <insert id="insertSelective" parameterType="com.chen.entity.GeneralConfirmDataRepayment">
+    <!--@mbg.generated-->
+    insert into general_confirm_data_repayment
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="generalConfirmDataRepaymentId != null">
+        general_confirm_data_repayment_id,
+      </if>
+      <if test="bank != null">
+        bank,
+      </if>
+      <if test="xaccount != null">
+        xaccount,
+      </if>
+      <if test="cardNbr != null">
+        card_nbr,
+      </if>
+      <if test="cardholder != null">
+        cardholder,
+      </if>
+      <if test="inpDay != null">
+        inp_day,
+      </if>
+      <if test="inpTime != null">
+        inp_time,
+      </if>
+      <if test="microRef != null">
+        micro_ref,
+      </if>
+      <if test="purchDay != null">
+        purch_day,
+      </if>
+      <if test="prodId != null">
+        prod_id,
+      </if>
+      <if test="intRate != null">
+        int_rate,
+      </if>
+      <if test="accelInt != null">
+        accel_int,
+      </if>
+      <if test="firstInt != null">
+        first_int,
+      </if>
+      <if test="mthInstl != null">
+        mth_instl,
+      </if>
+      <if test="instlCnt != null">
+        instl_cnt,
+      </if>
+      <if test="lstInstdy != null">
+        lst_instdy,
+      </if>
+      <if test="mthInt != null">
+        mth_int,
+      </if>
+      <if test="mthPpl != null">
+        mth_ppl,
+      </if>
+      <if test="nbrMths != null">
+        nbr_mths,
+      </if>
+      <if test="origPurch != null">
+        orig_purch,
+      </if>
+      <if test="remPpl != null">
+        rem_ppl,
+      </if>
+      <if test="origInt != null">
+        orig_int,
+      </if>
+      <if test="totIntCg != null">
+        tot_int_cg,
+      </if>
+      <if test="remInt != null">
+        rem_int,
+      </if>
+      <if test="origFee != null">
+        orig_fee,
+      </if>
+      <if test="remFee != null">
+        rem_fee,
+      </if>
+      <if test="transSrc != null">
+        trans_src,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+      <if test="statusDay != null">
+        status_day,
+      </if>
+      <if test="employee != null">
+        employee,
+      </if>
+      <if test="credpId != null">
+        credp_id,
+      </if>
+      <if test="mpType != null">
+        mp_type,
+      </if>
+      <if test="pauseNbrs != null">
+        pause_nbrs,
+      </if>
+      <if test="delayMth != null">
+        delay_mth,
+      </if>
+      <if test="currNum != null">
+        curr_num,
+      </if>
+      <if test="resPpl != null">
+        res_ppl,
+      </if>
+      <if test="interMths != null">
+        inter_mths,
+      </if>
+      <if test="paycfDay != null">
+        paycf_day,
+      </if>
+      <if test="priDldy != null">
+        pri_dldy,
+      </if>
+      <if test="dlyDays != null">
+        dly_days,
+      </if>
+      <if test="etlDay != null">
+        etl_day,
+      </if>
+      <if test="deduFee != null">
+        dedu_fee,
+      </if>
+      <if test="appSdayNew != null">
+        app_sday_new,
+      </if>
+      <if test="markDay != null">
+        mark_day,
+      </if>
+      <if test="remFeey != null">
+        rem_feey,
+      </if>
+      <if test="feePcnt != null">
+        fee_pcnt,
+      </if>
+      <if test="feeMths != null">
+        fee_mths,
+      </if>
+      <if test="chanelno != null">
+        chanelno,
+      </if>
+      <if test="mpIrrYr != null">
+        mp_irr_yr,
+      </if>
+      <if test="remPply != null">
+        rem_pply,
+      </if>
+      <if test="resPply != null">
+        res_pply,
+      </if>
+      <if test="fstInstdy != null">
+        fst_instdy,
+      </if>
+      <if test="mthFee != null">
+        mth_fee,
+      </if>
+      <if test="feePcntNew != null">
+        fee_pcnt_new,
+      </if>
+      <if test="remInty != null">
+        rem_inty,
+      </if>
+      <if test="instIntfe != null">
+        inst_intfe,
+      </if>
+      <if test="txtDate != null">
+        txt_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="generalConfirmDataRepaymentId != null">
+        #{generalConfirmDataRepaymentId,jdbcType=BIGINT},
+      </if>
+      <if test="bank != null">
+        #{bank,jdbcType=VARCHAR},
+      </if>
+      <if test="xaccount != null">
+        #{xaccount,jdbcType=VARCHAR},
+      </if>
+      <if test="cardNbr != null">
+        #{cardNbr,jdbcType=VARCHAR},
+      </if>
+      <if test="cardholder != null">
+        #{cardholder,jdbcType=VARCHAR},
+      </if>
+      <if test="inpDay != null">
+        #{inpDay,jdbcType=VARCHAR},
+      </if>
+      <if test="inpTime != null">
+        #{inpTime,jdbcType=VARCHAR},
+      </if>
+      <if test="microRef != null">
+        #{microRef,jdbcType=VARCHAR},
+      </if>
+      <if test="purchDay != null">
+        #{purchDay,jdbcType=VARCHAR},
+      </if>
+      <if test="prodId != null">
+        #{prodId,jdbcType=VARCHAR},
+      </if>
+      <if test="intRate != null">
+        #{intRate,jdbcType=DECIMAL},
+      </if>
+      <if test="accelInt != null">
+        #{accelInt,jdbcType=DECIMAL},
+      </if>
+      <if test="firstInt != null">
+        #{firstInt,jdbcType=DECIMAL},
+      </if>
+      <if test="mthInstl != null">
+        #{mthInstl,jdbcType=DECIMAL},
+      </if>
+      <if test="instlCnt != null">
+        #{instlCnt,jdbcType=VARCHAR},
+      </if>
+      <if test="lstInstdy != null">
+        #{lstInstdy,jdbcType=VARCHAR},
+      </if>
+      <if test="mthInt != null">
+        #{mthInt,jdbcType=DECIMAL},
+      </if>
+      <if test="mthPpl != null">
+        #{mthPpl,jdbcType=DECIMAL},
+      </if>
+      <if test="nbrMths != null">
+        #{nbrMths,jdbcType=VARCHAR},
+      </if>
+      <if test="origPurch != null">
+        #{origPurch,jdbcType=DECIMAL},
+      </if>
+      <if test="remPpl != null">
+        #{remPpl,jdbcType=DECIMAL},
+      </if>
+      <if test="origInt != null">
+        #{origInt,jdbcType=DECIMAL},
+      </if>
+      <if test="totIntCg != null">
+        #{totIntCg,jdbcType=DECIMAL},
+      </if>
+      <if test="remInt != null">
+        #{remInt,jdbcType=DECIMAL},
+      </if>
+      <if test="origFee != null">
+        #{origFee,jdbcType=DECIMAL},
+      </if>
+      <if test="remFee != null">
+        #{remFee,jdbcType=DECIMAL},
+      </if>
+      <if test="transSrc != null">
+        #{transSrc,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="statusDay != null">
+        #{statusDay,jdbcType=VARCHAR},
+      </if>
+      <if test="employee != null">
+        #{employee,jdbcType=VARCHAR},
+      </if>
+      <if test="credpId != null">
+        #{credpId,jdbcType=VARCHAR},
+      </if>
+      <if test="mpType != null">
+        #{mpType,jdbcType=VARCHAR},
+      </if>
+      <if test="pauseNbrs != null">
+        #{pauseNbrs,jdbcType=VARCHAR},
+      </if>
+      <if test="delayMth != null">
+        #{delayMth,jdbcType=VARCHAR},
+      </if>
+      <if test="currNum != null">
+        #{currNum,jdbcType=VARCHAR},
+      </if>
+      <if test="resPpl != null">
+        #{resPpl,jdbcType=DECIMAL},
+      </if>
+      <if test="interMths != null">
+        #{interMths,jdbcType=VARCHAR},
+      </if>
+      <if test="paycfDay != null">
+        #{paycfDay,jdbcType=VARCHAR},
+      </if>
+      <if test="priDldy != null">
+        #{priDldy,jdbcType=VARCHAR},
+      </if>
+      <if test="dlyDays != null">
+        #{dlyDays,jdbcType=VARCHAR},
+      </if>
+      <if test="etlDay != null">
+        #{etlDay,jdbcType=VARCHAR},
+      </if>
+      <if test="deduFee != null">
+        #{deduFee,jdbcType=DECIMAL},
+      </if>
+      <if test="appSdayNew != null">
+        #{appSdayNew,jdbcType=VARCHAR},
+      </if>
+      <if test="markDay != null">
+        #{markDay,jdbcType=VARCHAR},
+      </if>
+      <if test="remFeey != null">
+        #{remFeey,jdbcType=DECIMAL},
+      </if>
+      <if test="feePcnt != null">
+        #{feePcnt,jdbcType=DECIMAL},
+      </if>
+      <if test="feeMths != null">
+        #{feeMths,jdbcType=VARCHAR},
+      </if>
+      <if test="chanelno != null">
+        #{chanelno,jdbcType=VARCHAR},
+      </if>
+      <if test="mpIrrYr != null">
+        #{mpIrrYr,jdbcType=DECIMAL},
+      </if>
+      <if test="remPply != null">
+        #{remPply,jdbcType=DECIMAL},
+      </if>
+      <if test="resPply != null">
+        #{resPply,jdbcType=DECIMAL},
+      </if>
+      <if test="fstInstdy != null">
+        #{fstInstdy,jdbcType=VARCHAR},
+      </if>
+      <if test="mthFee != null">
+        #{mthFee,jdbcType=DECIMAL},
+      </if>
+      <if test="feePcntNew != null">
+        #{feePcntNew,jdbcType=DECIMAL},
+      </if>
+      <if test="remInty != null">
+        #{remInty,jdbcType=DECIMAL},
+      </if>
+      <if test="instIntfe != null">
+        #{instIntfe,jdbcType=DECIMAL},
+      </if>
+      <if test="txtDate != null">
+        #{txtDate,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.chen.entity.GeneralConfirmDataRepayment">
+    <!--@mbg.generated-->
+    update general_confirm_data_repayment
+    <set>
+      <if test="bank != null">
+        bank = #{bank,jdbcType=VARCHAR},
+      </if>
+      <if test="xaccount != null">
+        xaccount = #{xaccount,jdbcType=VARCHAR},
+      </if>
+      <if test="cardNbr != null">
+        card_nbr = #{cardNbr,jdbcType=VARCHAR},
+      </if>
+      <if test="cardholder != null">
+        cardholder = #{cardholder,jdbcType=VARCHAR},
+      </if>
+      <if test="inpDay != null">
+        inp_day = #{inpDay,jdbcType=VARCHAR},
+      </if>
+      <if test="inpTime != null">
+        inp_time = #{inpTime,jdbcType=VARCHAR},
+      </if>
+      <if test="microRef != null">
+        micro_ref = #{microRef,jdbcType=VARCHAR},
+      </if>
+      <if test="purchDay != null">
+        purch_day = #{purchDay,jdbcType=VARCHAR},
+      </if>
+      <if test="prodId != null">
+        prod_id = #{prodId,jdbcType=VARCHAR},
+      </if>
+      <if test="intRate != null">
+        int_rate = #{intRate,jdbcType=DECIMAL},
+      </if>
+      <if test="accelInt != null">
+        accel_int = #{accelInt,jdbcType=DECIMAL},
+      </if>
+      <if test="firstInt != null">
+        first_int = #{firstInt,jdbcType=DECIMAL},
+      </if>
+      <if test="mthInstl != null">
+        mth_instl = #{mthInstl,jdbcType=DECIMAL},
+      </if>
+      <if test="instlCnt != null">
+        instl_cnt = #{instlCnt,jdbcType=VARCHAR},
+      </if>
+      <if test="lstInstdy != null">
+        lst_instdy = #{lstInstdy,jdbcType=VARCHAR},
+      </if>
+      <if test="mthInt != null">
+        mth_int = #{mthInt,jdbcType=DECIMAL},
+      </if>
+      <if test="mthPpl != null">
+        mth_ppl = #{mthPpl,jdbcType=DECIMAL},
+      </if>
+      <if test="nbrMths != null">
+        nbr_mths = #{nbrMths,jdbcType=VARCHAR},
+      </if>
+      <if test="origPurch != null">
+        orig_purch = #{origPurch,jdbcType=DECIMAL},
+      </if>
+      <if test="remPpl != null">
+        rem_ppl = #{remPpl,jdbcType=DECIMAL},
+      </if>
+      <if test="origInt != null">
+        orig_int = #{origInt,jdbcType=DECIMAL},
+      </if>
+      <if test="totIntCg != null">
+        tot_int_cg = #{totIntCg,jdbcType=DECIMAL},
+      </if>
+      <if test="remInt != null">
+        rem_int = #{remInt,jdbcType=DECIMAL},
+      </if>
+      <if test="origFee != null">
+        orig_fee = #{origFee,jdbcType=DECIMAL},
+      </if>
+      <if test="remFee != null">
+        rem_fee = #{remFee,jdbcType=DECIMAL},
+      </if>
+      <if test="transSrc != null">
+        trans_src = #{transSrc,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        `status` = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="statusDay != null">
+        status_day = #{statusDay,jdbcType=VARCHAR},
+      </if>
+      <if test="employee != null">
+        employee = #{employee,jdbcType=VARCHAR},
+      </if>
+      <if test="credpId != null">
+        credp_id = #{credpId,jdbcType=VARCHAR},
+      </if>
+      <if test="mpType != null">
+        mp_type = #{mpType,jdbcType=VARCHAR},
+      </if>
+      <if test="pauseNbrs != null">
+        pause_nbrs = #{pauseNbrs,jdbcType=VARCHAR},
+      </if>
+      <if test="delayMth != null">
+        delay_mth = #{delayMth,jdbcType=VARCHAR},
+      </if>
+      <if test="currNum != null">
+        curr_num = #{currNum,jdbcType=VARCHAR},
+      </if>
+      <if test="resPpl != null">
+        res_ppl = #{resPpl,jdbcType=DECIMAL},
+      </if>
+      <if test="interMths != null">
+        inter_mths = #{interMths,jdbcType=VARCHAR},
+      </if>
+      <if test="paycfDay != null">
+        paycf_day = #{paycfDay,jdbcType=VARCHAR},
+      </if>
+      <if test="priDldy != null">
+        pri_dldy = #{priDldy,jdbcType=VARCHAR},
+      </if>
+      <if test="dlyDays != null">
+        dly_days = #{dlyDays,jdbcType=VARCHAR},
+      </if>
+      <if test="etlDay != null">
+        etl_day = #{etlDay,jdbcType=VARCHAR},
+      </if>
+      <if test="deduFee != null">
+        dedu_fee = #{deduFee,jdbcType=DECIMAL},
+      </if>
+      <if test="appSdayNew != null">
+        app_sday_new = #{appSdayNew,jdbcType=VARCHAR},
+      </if>
+      <if test="markDay != null">
+        mark_day = #{markDay,jdbcType=VARCHAR},
+      </if>
+      <if test="remFeey != null">
+        rem_feey = #{remFeey,jdbcType=DECIMAL},
+      </if>
+      <if test="feePcnt != null">
+        fee_pcnt = #{feePcnt,jdbcType=DECIMAL},
+      </if>
+      <if test="feeMths != null">
+        fee_mths = #{feeMths,jdbcType=VARCHAR},
+      </if>
+      <if test="chanelno != null">
+        chanelno = #{chanelno,jdbcType=VARCHAR},
+      </if>
+      <if test="mpIrrYr != null">
+        mp_irr_yr = #{mpIrrYr,jdbcType=DECIMAL},
+      </if>
+      <if test="remPply != null">
+        rem_pply = #{remPply,jdbcType=DECIMAL},
+      </if>
+      <if test="resPply != null">
+        res_pply = #{resPply,jdbcType=DECIMAL},
+      </if>
+      <if test="fstInstdy != null">
+        fst_instdy = #{fstInstdy,jdbcType=VARCHAR},
+      </if>
+      <if test="mthFee != null">
+        mth_fee = #{mthFee,jdbcType=DECIMAL},
+      </if>
+      <if test="feePcntNew != null">
+        fee_pcnt_new = #{feePcntNew,jdbcType=DECIMAL},
+      </if>
+      <if test="remInty != null">
+        rem_inty = #{remInty,jdbcType=DECIMAL},
+      </if>
+      <if test="instIntfe != null">
+        inst_intfe = #{instIntfe,jdbcType=DECIMAL},
+      </if>
+      <if test="txtDate != null">
+        txt_date = #{txtDate,jdbcType=DATE},
+      </if>
+    </set>
+    where general_confirm_data_repayment_id = #{generalConfirmDataRepaymentId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.chen.entity.GeneralConfirmDataRepayment">
+    <!--@mbg.generated-->
+    update general_confirm_data_repayment
+    set bank = #{bank,jdbcType=VARCHAR},
+      xaccount = #{xaccount,jdbcType=VARCHAR},
+      card_nbr = #{cardNbr,jdbcType=VARCHAR},
+      cardholder = #{cardholder,jdbcType=VARCHAR},
+      inp_day = #{inpDay,jdbcType=VARCHAR},
+      inp_time = #{inpTime,jdbcType=VARCHAR},
+      micro_ref = #{microRef,jdbcType=VARCHAR},
+      purch_day = #{purchDay,jdbcType=VARCHAR},
+      prod_id = #{prodId,jdbcType=VARCHAR},
+      int_rate = #{intRate,jdbcType=DECIMAL},
+      accel_int = #{accelInt,jdbcType=DECIMAL},
+      first_int = #{firstInt,jdbcType=DECIMAL},
+      mth_instl = #{mthInstl,jdbcType=DECIMAL},
+      instl_cnt = #{instlCnt,jdbcType=VARCHAR},
+      lst_instdy = #{lstInstdy,jdbcType=VARCHAR},
+      mth_int = #{mthInt,jdbcType=DECIMAL},
+      mth_ppl = #{mthPpl,jdbcType=DECIMAL},
+      nbr_mths = #{nbrMths,jdbcType=VARCHAR},
+      orig_purch = #{origPurch,jdbcType=DECIMAL},
+      rem_ppl = #{remPpl,jdbcType=DECIMAL},
+      orig_int = #{origInt,jdbcType=DECIMAL},
+      tot_int_cg = #{totIntCg,jdbcType=DECIMAL},
+      rem_int = #{remInt,jdbcType=DECIMAL},
+      orig_fee = #{origFee,jdbcType=DECIMAL},
+      rem_fee = #{remFee,jdbcType=DECIMAL},
+      trans_src = #{transSrc,jdbcType=VARCHAR},
+      `status` = #{status,jdbcType=VARCHAR},
+      status_day = #{statusDay,jdbcType=VARCHAR},
+      employee = #{employee,jdbcType=VARCHAR},
+      credp_id = #{credpId,jdbcType=VARCHAR},
+      mp_type = #{mpType,jdbcType=VARCHAR},
+      pause_nbrs = #{pauseNbrs,jdbcType=VARCHAR},
+      delay_mth = #{delayMth,jdbcType=VARCHAR},
+      curr_num = #{currNum,jdbcType=VARCHAR},
+      res_ppl = #{resPpl,jdbcType=DECIMAL},
+      inter_mths = #{interMths,jdbcType=VARCHAR},
+      paycf_day = #{paycfDay,jdbcType=VARCHAR},
+      pri_dldy = #{priDldy,jdbcType=VARCHAR},
+      dly_days = #{dlyDays,jdbcType=VARCHAR},
+      etl_day = #{etlDay,jdbcType=VARCHAR},
+      dedu_fee = #{deduFee,jdbcType=DECIMAL},
+      app_sday_new = #{appSdayNew,jdbcType=VARCHAR},
+      mark_day = #{markDay,jdbcType=VARCHAR},
+      rem_feey = #{remFeey,jdbcType=DECIMAL},
+      fee_pcnt = #{feePcnt,jdbcType=DECIMAL},
+      fee_mths = #{feeMths,jdbcType=VARCHAR},
+      chanelno = #{chanelno,jdbcType=VARCHAR},
+      mp_irr_yr = #{mpIrrYr,jdbcType=DECIMAL},
+      rem_pply = #{remPply,jdbcType=DECIMAL},
+      res_pply = #{resPply,jdbcType=DECIMAL},
+      fst_instdy = #{fstInstdy,jdbcType=VARCHAR},
+      mth_fee = #{mthFee,jdbcType=DECIMAL},
+      fee_pcnt_new = #{feePcntNew,jdbcType=DECIMAL},
+      rem_inty = #{remInty,jdbcType=DECIMAL},
+      inst_intfe = #{instIntfe,jdbcType=DECIMAL},
+      txt_date = #{txtDate,jdbcType=DATE}
+    where general_confirm_data_repayment_id = #{generalConfirmDataRepaymentId,jdbcType=BIGINT}
+  </update>
   <update id="updateBatch" parameterType="java.util.List">
     <!--@mbg.generated-->
     update general_confirm_data_repayment

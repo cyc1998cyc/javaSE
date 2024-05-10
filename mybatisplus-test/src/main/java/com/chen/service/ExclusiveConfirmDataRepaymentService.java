@@ -2,9 +2,20 @@ package com.chen.service;
 
 import java.util.List;
 import com.chen.entity.ExclusiveConfirmDataRepayment;
-import com.baomidou.mybatisplus.extension.service.IService;
-public interface ExclusiveConfirmDataRepaymentService extends IService<ExclusiveConfirmDataRepayment>{
+public interface ExclusiveConfirmDataRepaymentService{
 
+
+    int deleteByPrimaryKey(Long exclusiveConfirmDataRepaymentId);
+
+    int insert(ExclusiveConfirmDataRepayment record);
+
+    int insertSelective(ExclusiveConfirmDataRepayment record);
+
+    ExclusiveConfirmDataRepayment selectByPrimaryKey(Long exclusiveConfirmDataRepaymentId);
+
+    int updateByPrimaryKeySelective(ExclusiveConfirmDataRepayment record);
+
+    int updateByPrimaryKey(ExclusiveConfirmDataRepayment record);
 
     int updateBatch(List<ExclusiveConfirmDataRepayment> list);
 

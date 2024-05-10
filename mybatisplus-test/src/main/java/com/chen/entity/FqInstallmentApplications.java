@@ -1,9 +1,5 @@
 package com.chen.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -13,177 +9,147 @@ import lombok.Data;
     * 分期付款申请
     */
 @Data
-@TableName(value = "fq_installment_applications")
 public class FqInstallmentApplications implements Serializable {
     /**
-     * id
-     */
-    @TableId(value = "fq_installment_applications_id", type = IdType.INPUT)
+    * id
+    */
     private Long fqInstallmentApplicationsId;
 
     /**
-     * 卡号
-     */
-    @TableField(value = "card_nbr")
+    * 卡号
+    */
     private String cardNbr;
 
     /**
-     * 证件号码
-     */
-    @TableField(value = "custr_nbr")
+    * 证件号码
+    */
     private String custrNbr;
 
-    @TableField(value = "account")
     private String account;
 
     /**
-     * 信用卡类别 1:主卡；2:附卡
-     */
-    @TableField(value = "cardholder")
+    * 信用卡类别 1:主卡；2:附卡
+    */
     private String cardholder;
 
     /**
-     * 微索引编号
-     */
-    @TableField(value = "micro_no")
+    * 微索引编号
+    */
     private String microNo;
 
     /**
-     * 商品编号
-     */
-    @TableField(value = "prod_id")
+    * 商品编号
+    */
     private String prodId;
 
     /**
-     * 分期付款金额
-     */
-    @TableField(value = "mp_amt")
+    * 分期付款金额
+    */
     private BigDecimal mpAmt;
 
     /**
-     * 每月分摊金额
-     */
-    @TableField(value = "mp_instl")
+    * 每月分摊金额
+    */
     private BigDecimal mpInstl;
 
     /**
-     * 分期期数
-     */
-    @TableField(value = "nbr_mths")
+    * 分期期数
+    */
     private String nbrMths;
 
     /**
-     * 申请状态
-     */
-    @TableField(value = "mpau_sts")
+    * 申请状态
+    */
     private String mpauSts;
 
     /**
-     * 状态变动日期
-     */
-    @TableField(value = "status_day")
+    * 状态变动日期
+    */
     private String statusDay;
 
     /**
-     * 拒绝原因代码
-     */
-    @TableField(value = "deccan_rea")
+    * 拒绝原因代码
+    */
     private String deccanRea;
 
     /**
-     * 授权日期
-     */
-    @TableField(value = "auth_day")
+    * 授权日期
+    */
     private String authDay;
 
     /**
-     * 授权操作员
-     */
-    @TableField(value = "auth_emp")
+    * 授权操作员
+    */
     private String authEmp;
 
     /**
-     * 授权时间
-     */
-    @TableField(value = "auth_time")
+    * 授权时间
+    */
     private String authTime;
 
     /**
-     * 请款的日期
-     */
-    @TableField(value = "match_day")
+    * 请款的日期
+    */
     private String matchDay;
 
     /**
-     * 录入日期
-     */
-    @TableField(value = "preauth_dy")
+    * 录入日期
+    */
     private String preauthDy;
 
     /**
-     * 录入时间
-     */
-    @TableField(value = "preauth_tm")
+    * 录入时间
+    */
     private String preauthTm;
 
     /**
-     * 录入操作员
-     */
-    @TableField(value = "inp_empno")
+    * 录入操作员
+    */
     private String inpEmpno;
 
     /**
-     * 币种
-     */
-    @TableField(value = "curr_num")
+    * 币种
+    */
     private String currNum;
 
     /**
-     * 分期手续费红包金额
-     */
-    @TableField(value = "dedu_fee")
+    * 分期手续费红包金额
+    */
     private BigDecimal deduFee;
 
     /**
-     * 申请件编号日期位
-     */
-    @TableField(value = "app_sday_new")
+    * 申请件编号日期位
+    */
     private String appSdayNew;
 
     /**
-     * 分期流水号
-     */
-    @TableField(value = "chanelno")
+    * 分期流水号
+    */
     private String chanelno;
 
     /**
-     * 分期强制手续费率
-     */
-    @TableField(value = "fee_pcnt")
+    * 分期强制手续费率
+    */
     private BigDecimal feePcnt;
 
     /**
-     * 手续费率强制折扣系数
-     */
-    @TableField(value = "feepcnt_pn")
+    * 手续费率强制折扣系数
+    */
     private BigDecimal feepcntPn;
 
     /**
-     * 未出账单转账单分期金额
-     */
-    @TableField(value = "bal_mp_amt")
+    * 未出账单转账单分期金额
+    */
     private BigDecimal balMpAmt;
 
     /**
-     * 未出账单转账单分期金额符号位
-     */
-    @TableField(value = "bal_mp_amt_flg")
+    * 未出账单转账单分期金额符号位
+    */
     private String balMpAmtFlg;
 
     /**
-     * 文件导入日期
-     */
-    @TableField(value = "txt_date")
+    * 文件导入日期
+    */
     private Date txtDate;
 
     private static final long serialVersionUID = 1L;

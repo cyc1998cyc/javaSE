@@ -2,9 +2,20 @@ package com.chen.service;
 
 import com.chen.entity.GeneralConfirmDataRepayment;
 import java.util.List;
-import com.baomidou.mybatisplus.extension.service.IService;
-public interface GeneralConfirmDataRepaymentService extends IService<GeneralConfirmDataRepayment>{
+public interface GeneralConfirmDataRepaymentService{
 
+
+    int deleteByPrimaryKey(Long generalConfirmDataRepaymentId);
+
+    int insert(GeneralConfirmDataRepayment record);
+
+    int insertSelective(GeneralConfirmDataRepayment record);
+
+    GeneralConfirmDataRepayment selectByPrimaryKey(Long generalConfirmDataRepaymentId);
+
+    int updateByPrimaryKeySelective(GeneralConfirmDataRepayment record);
+
+    int updateByPrimaryKey(GeneralConfirmDataRepayment record);
 
     int updateBatch(List<GeneralConfirmDataRepayment> list);
 
