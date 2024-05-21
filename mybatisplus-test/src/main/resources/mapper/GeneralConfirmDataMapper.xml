@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chen.mapper.GeneralConfirmDataMapper">
+  <resultMap id="BaseResultMap" type="com.chen.entity.GeneralConfirmData">
+    <!--@mbg.generated-->
+    <!--@Table general_confirm_data-->
+    <id column="general_confirm_data_id" jdbcType="BIGINT" property="generalConfirmDataId" />
+    <id column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="id_no" jdbcType="VARCHAR" property="idNo" />
+    <result column="id_tp" jdbcType="VARCHAR" property="idTp" />
+    <result column="crd_no" jdbcType="VARCHAR" property="crdNo" />
+    <result column="apply_time" jdbcType="VARCHAR" property="applyTime" />
+    <result column="crdt_aply_no" jdbcType="VARCHAR" property="crdtAplyNo" />
+    <result column="stgs_num" jdbcType="VARCHAR" property="stgsNum" />
+    <result column="stgs_amt" jdbcType="VARCHAR" property="stgsAmt" />
+    <result column="ccy" jdbcType="VARCHAR" property="ccy" />
+    <result column="mthlyly_pymnt_amt" jdbcType="VARCHAR" property="mthlylyPymntAmt" />
+    <result column="fee" jdbcType="VARCHAR" property="fee" />
+    <result column="stgs_aplctn_frm_no" jdbcType="VARCHAR" property="stgsAplctnFrmNo" />
+    <result column="frc_fee_rt_dsct_cfcnt" jdbcType="VARCHAR" property="frcFeeRtDsctCfcnt" />
+    <result column="txn_src" jdbcType="VARCHAR" property="txnSrc" />
+    <result column="dy_request_no" jdbcType="VARCHAR" property="dyRequestNo" />
+    <result column="status" jdbcType="SMALLINT" property="status" />
+    <result column="seq_no1" jdbcType="VARCHAR" property="seqNo1" />
+    <result column="seq_no2" jdbcType="VARCHAR" property="seqNo2" />
+    <result column="seq_no3" jdbcType="VARCHAR" property="seqNo3" />
+    <result column="seq_no4" jdbcType="VARCHAR" property="seqNo4" />
+    <result column="instl_type" jdbcType="VARCHAR" property="instlType" />
+    <result column="rate_num" jdbcType="VARCHAR" property="rateNum" />
+    <result column="anlintrstrat" jdbcType="VARCHAR" property="anlintrstrat" />
+    <result column="ori_fee" jdbcType="VARCHAR" property="oriFee" />
+    <result column="ddctn_amt" jdbcType="VARCHAR" property="ddctnAmt" />
+    <result column="bank_card_date" jdbcType="TIMESTAMP" property="bankCardDate" />
+    <result column="each_prd_fee" jdbcType="VARCHAR" property="eachPrdFee" />
+    <result column="agng_pd_pcdr_fee" jdbcType="VARCHAR" property="agngPdPcdrFee" />
+    <result column="pcdr_fee_fee_rt" jdbcType="VARCHAR" property="pcdrFeeFeeRt" />
+    <result column="rman_not_rpymnt_qt" jdbcType="VARCHAR" property="rmanNotRpymntQt" />
+    <result column="alrdy_bll_prt" jdbcType="VARCHAR" property="alrdyBllPrt" />
+    <result column="not_bll_prt" jdbcType="VARCHAR" property="notBllPrt" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    general_confirm_data_id, create_time, id_no, id_tp, crd_no, apply_time, crdt_aply_no, 
+    stgs_num, stgs_amt, ccy, mthlyly_pymnt_amt, fee, stgs_aplctn_frm_no, frc_fee_rt_dsct_cfcnt, 
+    txn_src, dy_request_no, `status`, seq_no1, seq_no2, seq_no3, seq_no4, instl_type, 
+    rate_num, anlintrstrat, ori_fee, ddctn_amt, bank_card_date, each_prd_fee, agng_pd_pcdr_fee, 
+    pcdr_fee_fee_rt, rman_not_rpymnt_qt, alrdy_bll_prt, not_bll_prt
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="map" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from general_confirm_data
+    where general_confirm_data_id = #{generalConfirmDataId,jdbcType=BIGINT}
+      and create_time = #{createTime,jdbcType=TIMESTAMP}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="map">
+    <!--@mbg.generated-->
+    delete from general_confirm_data
+    where general_confirm_data_id = #{generalConfirmDataId,jdbcType=BIGINT}
+      and create_time = #{createTime,jdbcType=TIMESTAMP}
+  </delete>
+  <insert id="insert" keyColumn="general_confirm_data_id" keyProperty="generalConfirmDataId" parameterType="com.chen.entity.GeneralConfirmData" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into general_confirm_data (create_time, id_no, id_tp, 
+      crd_no, apply_time, crdt_aply_no, 
+      stgs_num, stgs_amt, ccy, 
+      mthlyly_pymnt_amt, fee, stgs_aplctn_frm_no, 
+      frc_fee_rt_dsct_cfcnt, txn_src, dy_request_no, 
+      `status`, seq_no1, seq_no2, 
+      seq_no3, seq_no4, instl_type, 
+      rate_num, anlintrstrat, ori_fee, 
+      ddctn_amt, bank_card_date, each_prd_fee, 
+      agng_pd_pcdr_fee, pcdr_fee_fee_rt, rman_not_rpymnt_qt, 
+      alrdy_bll_prt, not_bll_prt)
+    values (#{createTime,jdbcType=TIMESTAMP}, #{idNo,jdbcType=VARCHAR}, #{idTp,jdbcType=VARCHAR}, 
+      #{crdNo,jdbcType=VARCHAR}, #{applyTime,jdbcType=VARCHAR}, #{crdtAplyNo,jdbcType=VARCHAR}, 
+      #{stgsNum,jdbcType=VARCHAR}, #{stgsAmt,jdbcType=VARCHAR}, #{ccy,jdbcType=VARCHAR}, 
+      #{mthlylyPymntAmt,jdbcType=VARCHAR}, #{fee,jdbcType=VARCHAR}, #{stgsAplctnFrmNo,jdbcType=VARCHAR}, 
+      #{frcFeeRtDsctCfcnt,jdbcType=VARCHAR}, #{txnSrc,jdbcType=VARCHAR}, #{dyRequestNo,jdbcType=VARCHAR}, 
+      #{status,jdbcType=SMALLINT}, #{seqNo1,jdbcType=VARCHAR}, #{seqNo2,jdbcType=VARCHAR}, 
+      #{seqNo3,jdbcType=VARCHAR}, #{seqNo4,jdbcType=VARCHAR}, #{instlType,jdbcType=VARCHAR}, 
+      #{rateNum,jdbcType=VARCHAR}, #{anlintrstrat,jdbcType=VARCHAR}, #{oriFee,jdbcType=VARCHAR}, 
+      #{ddctnAmt,jdbcType=VARCHAR}, #{bankCardDate,jdbcType=TIMESTAMP}, #{eachPrdFee,jdbcType=VARCHAR}, 
+      #{agngPdPcdrFee,jdbcType=VARCHAR}, #{pcdrFeeFeeRt,jdbcType=VARCHAR}, #{rmanNotRpymntQt,jdbcType=VARCHAR}, 
+      #{alrdyBllPrt,jdbcType=VARCHAR}, #{notBllPrt,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="general_confirm_data_id" keyProperty="generalConfirmDataId" parameterType="com.chen.entity.GeneralConfirmData" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into general_confirm_data
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="idNo != null">
+        id_no,
+      </if>
+      <if test="idTp != null">
+        id_tp,
+      </if>
+      <if test="crdNo != null">
+        crd_no,
+      </if>
+      <if test="applyTime != null">
+        apply_time,
+      </if>
+      <if test="crdtAplyNo != null">
+        crdt_aply_no,
+      </if>
+      <if test="stgsNum != null">
+        stgs_num,
+      </if>
+      <if test="stgsAmt != null">
+        stgs_amt,
+      </if>
+      <if test="ccy != null">
+        ccy,
+      </if>
+      <if test="mthlylyPymntAmt != null">
+        mthlyly_pymnt_amt,
+      </if>
+      <if test="fee != null">
+        fee,
+      </if>
+      <if test="stgsAplctnFrmNo != null">
+        stgs_aplctn_frm_no,
+      </if>
+      <if test="frcFeeRtDsctCfcnt != null">
+        frc_fee_rt_dsct_cfcnt,
+      </if>
+      <if test="txnSrc != null">
+        txn_src,
+      </if>
+      <if test="dyRequestNo != null">
+        dy_request_no,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+      <if test="seqNo1 != null">
+        seq_no1,
+      </if>
+      <if test="seqNo2 != null">
+        seq_no2,
+      </if>
+      <if test="seqNo3 != null">
+        seq_no3,
+      </if>
+      <if test="seqNo4 != null">
+        seq_no4,
+      </if>
+      <if test="instlType != null">
+        instl_type,
+      </if>
+      <if test="rateNum != null">
+        rate_num,
+      </if>
+      <if test="anlintrstrat != null">
+        anlintrstrat,
+      </if>
+      <if test="oriFee != null">
+        ori_fee,
+      </if>
+      <if test="ddctnAmt != null">
+        ddctn_amt,
+      </if>
+      <if test="bankCardDate != null">
+        bank_card_date,
+      </if>
+      <if test="eachPrdFee != null">
+        each_prd_fee,
+      </if>
+      <if test="agngPdPcdrFee != null">
+        agng_pd_pcdr_fee,
+      </if>
+      <if test="pcdrFeeFeeRt != null">
+        pcdr_fee_fee_rt,
+      </if>
+      <if test="rmanNotRpymntQt != null">
+        rman_not_rpymnt_qt,
+      </if>
+      <if test="alrdyBllPrt != null">
+        alrdy_bll_prt,
+      </if>
+      <if test="notBllPrt != null">
+        not_bll_prt,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="idNo != null">
+        #{idNo,jdbcType=VARCHAR},
+      </if>
+      <if test="idTp != null">
+        #{idTp,jdbcType=VARCHAR},
+      </if>
+      <if test="crdNo != null">
+        #{crdNo,jdbcType=VARCHAR},
+      </if>
+      <if test="applyTime != null">
+        #{applyTime,jdbcType=VARCHAR},
+      </if>
+      <if test="crdtAplyNo != null">
+        #{crdtAplyNo,jdbcType=VARCHAR},
+      </if>
+      <if test="stgsNum != null">
+        #{stgsNum,jdbcType=VARCHAR},
+      </if>
+      <if test="stgsAmt != null">
+        #{stgsAmt,jdbcType=VARCHAR},
+      </if>
+      <if test="ccy != null">
+        #{ccy,jdbcType=VARCHAR},
+      </if>
+      <if test="mthlylyPymntAmt != null">
+        #{mthlylyPymntAmt,jdbcType=VARCHAR},
+      </if>
+      <if test="fee != null">
+        #{fee,jdbcType=VARCHAR},
+      </if>
+      <if test="stgsAplctnFrmNo != null">
+        #{stgsAplctnFrmNo,jdbcType=VARCHAR},
+      </if>
+      <if test="frcFeeRtDsctCfcnt != null">
+        #{frcFeeRtDsctCfcnt,jdbcType=VARCHAR},
+      </if>
+      <if test="txnSrc != null">
+        #{txnSrc,jdbcType=VARCHAR},
+      </if>
+      <if test="dyRequestNo != null">
+        #{dyRequestNo,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=SMALLINT},
+      </if>
+      <if test="seqNo1 != null">
+        #{seqNo1,jdbcType=VARCHAR},
+      </if>
+      <if test="seqNo2 != null">
+        #{seqNo2,jdbcType=VARCHAR},
+      </if>
+      <if test="seqNo3 != null">
+        #{seqNo3,jdbcType=VARCHAR},
+      </if>
+      <if test="seqNo4 != null">
+        #{seqNo4,jdbcType=VARCHAR},
+      </if>
+      <if test="instlType != null">
+        #{instlType,jdbcType=VARCHAR},
+      </if>
+      <if test="rateNum != null">
+        #{rateNum,jdbcType=VARCHAR},
+      </if>
+      <if test="anlintrstrat != null">
+        #{anlintrstrat,jdbcType=VARCHAR},
+      </if>
+      <if test="oriFee != null">
+        #{oriFee,jdbcType=VARCHAR},
+      </if>
+      <if test="ddctnAmt != null">
+        #{ddctnAmt,jdbcType=VARCHAR},
+      </if>
+      <if test="bankCardDate != null">
+        #{bankCardDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="eachPrdFee != null">
+        #{eachPrdFee,jdbcType=VARCHAR},
+      </if>
+      <if test="agngPdPcdrFee != null">
+        #{agngPdPcdrFee,jdbcType=VARCHAR},
+      </if>
+      <if test="pcdrFeeFeeRt != null">
+        #{pcdrFeeFeeRt,jdbcType=VARCHAR},
+      </if>
+      <if test="rmanNotRpymntQt != null">
+        #{rmanNotRpymntQt,jdbcType=VARCHAR},
+      </if>
+      <if test="alrdyBllPrt != null">
+        #{alrdyBllPrt,jdbcType=VARCHAR},
+      </if>
+      <if test="notBllPrt != null">
+        #{notBllPrt,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.chen.entity.GeneralConfirmData">
+    <!--@mbg.generated-->
+    update general_confirm_data
+    <set>
+      <if test="idNo != null">
+        id_no = #{idNo,jdbcType=VARCHAR},
+      </if>
+      <if test="idTp != null">
+        id_tp = #{idTp,jdbcType=VARCHAR},
+      </if>
+      <if test="crdNo != null">
+        crd_no = #{crdNo,jdbcType=VARCHAR},
+      </if>
+      <if test="applyTime != null">
+        apply_time = #{applyTime,jdbcType=VARCHAR},
+      </if>
+      <if test="crdtAplyNo != null">
+        crdt_aply_no = #{crdtAplyNo,jdbcType=VARCHAR},
+      </if>
+      <if test="stgsNum != null">
+        stgs_num = #{stgsNum,jdbcType=VARCHAR},
+      </if>
+      <if test="stgsAmt != null">
+        stgs_amt = #{stgsAmt,jdbcType=VARCHAR},
+      </if>
+      <if test="ccy != null">
+        ccy = #{ccy,jdbcType=VARCHAR},
+      </if>
+      <if test="mthlylyPymntAmt != null">
+        mthlyly_pymnt_amt = #{mthlylyPymntAmt,jdbcType=VARCHAR},
+      </if>
+      <if test="fee != null">
+        fee = #{fee,jdbcType=VARCHAR},
+      </if>
+      <if test="stgsAplctnFrmNo != null">
+        stgs_aplctn_frm_no = #{stgsAplctnFrmNo,jdbcType=VARCHAR},
+      </if>
+      <if test="frcFeeRtDsctCfcnt != null">
+        frc_fee_rt_dsct_cfcnt = #{frcFeeRtDsctCfcnt,jdbcType=VARCHAR},
+      </if>
+      <if test="txnSrc != null">
+        txn_src = #{txnSrc,jdbcType=VARCHAR},
+      </if>
+      <if test="dyRequestNo != null">
+        dy_request_no = #{dyRequestNo,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        `status` = #{status,jdbcType=SMALLINT},
+      </if>
+      <if test="seqNo1 != null">
+        seq_no1 = #{seqNo1,jdbcType=VARCHAR},
+      </if>
+      <if test="seqNo2 != null">
+        seq_no2 = #{seqNo2,jdbcType=VARCHAR},
+      </if>
+      <if test="seqNo3 != null">
+        seq_no3 = #{seqNo3,jdbcType=VARCHAR},
+      </if>
+      <if test="seqNo4 != null">
+        seq_no4 = #{seqNo4,jdbcType=VARCHAR},
+      </if>
+      <if test="instlType != null">
+        instl_type = #{instlType,jdbcType=VARCHAR},
+      </if>
+      <if test="rateNum != null">
+        rate_num = #{rateNum,jdbcType=VARCHAR},
+      </if>
+      <if test="anlintrstrat != null">
+        anlintrstrat = #{anlintrstrat,jdbcType=VARCHAR},
+      </if>
+      <if test="oriFee != null">
+        ori_fee = #{oriFee,jdbcType=VARCHAR},
+      </if>
+      <if test="ddctnAmt != null">
+        ddctn_amt = #{ddctnAmt,jdbcType=VARCHAR},
+      </if>
+      <if test="bankCardDate != null">
+        bank_card_date = #{bankCardDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="eachPrdFee != null">
+        each_prd_fee = #{eachPrdFee,jdbcType=VARCHAR},
+      </if>
+      <if test="agngPdPcdrFee != null">
+        agng_pd_pcdr_fee = #{agngPdPcdrFee,jdbcType=VARCHAR},
+      </if>
+      <if test="pcdrFeeFeeRt != null">
+        pcdr_fee_fee_rt = #{pcdrFeeFeeRt,jdbcType=VARCHAR},
+      </if>
+      <if test="rmanNotRpymntQt != null">
+        rman_not_rpymnt_qt = #{rmanNotRpymntQt,jdbcType=VARCHAR},
+      </if>
+      <if test="alrdyBllPrt != null">
+        alrdy_bll_prt = #{alrdyBllPrt,jdbcType=VARCHAR},
+      </if>
+      <if test="notBllPrt != null">
+        not_bll_prt = #{notBllPrt,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where general_confirm_data_id = #{generalConfirmDataId,jdbcType=BIGINT}
+      and create_time = #{createTime,jdbcType=TIMESTAMP}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.chen.entity.GeneralConfirmData">
+    <!--@mbg.generated-->
+    update general_confirm_data
+    set id_no = #{idNo,jdbcType=VARCHAR},
+      id_tp = #{idTp,jdbcType=VARCHAR},
+      crd_no = #{crdNo,jdbcType=VARCHAR},
+      apply_time = #{applyTime,jdbcType=VARCHAR},
+      crdt_aply_no = #{crdtAplyNo,jdbcType=VARCHAR},
+      stgs_num = #{stgsNum,jdbcType=VARCHAR},
+      stgs_amt = #{stgsAmt,jdbcType=VARCHAR},
+      ccy = #{ccy,jdbcType=VARCHAR},
+      mthlyly_pymnt_amt = #{mthlylyPymntAmt,jdbcType=VARCHAR},
+      fee = #{fee,jdbcType=VARCHAR},
+      stgs_aplctn_frm_no = #{stgsAplctnFrmNo,jdbcType=VARCHAR},
+      frc_fee_rt_dsct_cfcnt = #{frcFeeRtDsctCfcnt,jdbcType=VARCHAR},
+      txn_src = #{txnSrc,jdbcType=VARCHAR},
+      dy_request_no = #{dyRequestNo,jdbcType=VARCHAR},
+      `status` = #{status,jdbcType=SMALLINT},
+      seq_no1 = #{seqNo1,jdbcType=VARCHAR},
+      seq_no2 = #{seqNo2,jdbcType=VARCHAR},
+      seq_no3 = #{seqNo3,jdbcType=VARCHAR},
+      seq_no4 = #{seqNo4,jdbcType=VARCHAR},
+      instl_type = #{instlType,jdbcType=VARCHAR},
+      rate_num = #{rateNum,jdbcType=VARCHAR},
+      anlintrstrat = #{anlintrstrat,jdbcType=VARCHAR},
+      ori_fee = #{oriFee,jdbcType=VARCHAR},
+      ddctn_amt = #{ddctnAmt,jdbcType=VARCHAR},
+      bank_card_date = #{bankCardDate,jdbcType=TIMESTAMP},
+      each_prd_fee = #{eachPrdFee,jdbcType=VARCHAR},
+      agng_pd_pcdr_fee = #{agngPdPcdrFee,jdbcType=VARCHAR},
+      pcdr_fee_fee_rt = #{pcdrFeeFeeRt,jdbcType=VARCHAR},
+      rman_not_rpymnt_qt = #{rmanNotRpymntQt,jdbcType=VARCHAR},
+      alrdy_bll_prt = #{alrdyBllPrt,jdbcType=VARCHAR},
+      not_bll_prt = #{notBllPrt,jdbcType=VARCHAR}
+    where general_confirm_data_id = #{generalConfirmDataId,jdbcType=BIGINT}
+      and create_time = #{createTime,jdbcType=TIMESTAMP}
+  </update>
+  <update id="updateBatch" parameterType="java.util.List">
+    <!--@mbg.generated-->
+    update general_confirm_data
+    <trim prefix="set" suffixOverrides=",">
+      <trim prefix="id_no = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.idNo,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="id_tp = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.idTp,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="crd_no = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.crdNo,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="apply_time = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.applyTime,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="crdt_aply_no = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.crdtAplyNo,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="stgs_num = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.stgsNum,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="stgs_amt = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.stgsAmt,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="ccy = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.ccy,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="mthlyly_pymnt_amt = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.mthlylyPymntAmt,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="fee = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.fee,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="stgs_aplctn_frm_no = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.stgsAplctnFrmNo,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="frc_fee_rt_dsct_cfcnt = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.frcFeeRtDsctCfcnt,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="txn_src = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.txnSrc,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="dy_request_no = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.dyRequestNo,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="`status` = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.status,jdbcType=SMALLINT}
+        </foreach>
+      </trim>
+      <trim prefix="seq_no1 = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.seqNo1,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="seq_no2 = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.seqNo2,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="seq_no3 = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.seqNo3,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="seq_no4 = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.seqNo4,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="instl_type = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.instlType,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="rate_num = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.rateNum,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="anlintrstrat = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.anlintrstrat,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="ori_fee = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.oriFee,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="ddctn_amt = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.ddctnAmt,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="bank_card_date = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.bankCardDate,jdbcType=TIMESTAMP}
+        </foreach>
+      </trim>
+      <trim prefix="each_prd_fee = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.eachPrdFee,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="agng_pd_pcdr_fee = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.agngPdPcdrFee,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="pcdr_fee_fee_rt = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.pcdrFeeFeeRt,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="rman_not_rpymnt_qt = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.rmanNotRpymntQt,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="alrdy_bll_prt = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.alrdyBllPrt,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="not_bll_prt = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when general_confirm_data_id = #{item.generalConfirmDataId,jdbcType=BIGINT} then #{item.notBllPrt,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+    </trim>
+    where general_confirm_data_id in
+    <foreach close=")" collection="list" item="item" open="(" separator=", ">
+      #{item.generalConfirmDataId,jdbcType=BIGINT}
+    </foreach>
+  </update>
+  <insert id="batchInsert" keyColumn="general_confirm_data_id" keyProperty="generalConfirmDataId" parameterType="map" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into general_confirm_data
+    (create_time, id_no, id_tp, crd_no, apply_time, crdt_aply_no, stgs_num, stgs_amt, 
+      ccy, mthlyly_pymnt_amt, fee, stgs_aplctn_frm_no, frc_fee_rt_dsct_cfcnt, txn_src, 
+      dy_request_no, `status`, seq_no1, seq_no2, seq_no3, seq_no4, instl_type, rate_num, 
+      anlintrstrat, ori_fee, ddctn_amt, bank_card_date, each_prd_fee, agng_pd_pcdr_fee, 
+      pcdr_fee_fee_rt, rman_not_rpymnt_qt, alrdy_bll_prt, not_bll_prt)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.createTime,jdbcType=TIMESTAMP}, #{item.idNo,jdbcType=VARCHAR}, #{item.idTp,jdbcType=VARCHAR}, 
+        #{item.crdNo,jdbcType=VARCHAR}, #{item.applyTime,jdbcType=VARCHAR}, #{item.crdtAplyNo,jdbcType=VARCHAR}, 
+        #{item.stgsNum,jdbcType=VARCHAR}, #{item.stgsAmt,jdbcType=VARCHAR}, #{item.ccy,jdbcType=VARCHAR}, 
+        #{item.mthlylyPymntAmt,jdbcType=VARCHAR}, #{item.fee,jdbcType=VARCHAR}, #{item.stgsAplctnFrmNo,jdbcType=VARCHAR}, 
+        #{item.frcFeeRtDsctCfcnt,jdbcType=VARCHAR}, #{item.txnSrc,jdbcType=VARCHAR}, #{item.dyRequestNo,jdbcType=VARCHAR}, 
+        #{item.status,jdbcType=SMALLINT}, #{item.seqNo1,jdbcType=VARCHAR}, #{item.seqNo2,jdbcType=VARCHAR}, 
+        #{item.seqNo3,jdbcType=VARCHAR}, #{item.seqNo4,jdbcType=VARCHAR}, #{item.instlType,jdbcType=VARCHAR}, 
+        #{item.rateNum,jdbcType=VARCHAR}, #{item.anlintrstrat,jdbcType=VARCHAR}, #{item.oriFee,jdbcType=VARCHAR}, 
+        #{item.ddctnAmt,jdbcType=VARCHAR}, #{item.bankCardDate,jdbcType=TIMESTAMP}, #{item.eachPrdFee,jdbcType=VARCHAR}, 
+        #{item.agngPdPcdrFee,jdbcType=VARCHAR}, #{item.pcdrFeeFeeRt,jdbcType=VARCHAR}, 
+        #{item.rmanNotRpymntQt,jdbcType=VARCHAR}, #{item.alrdyBllPrt,jdbcType=VARCHAR}, 
+        #{item.notBllPrt,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+</mapper>

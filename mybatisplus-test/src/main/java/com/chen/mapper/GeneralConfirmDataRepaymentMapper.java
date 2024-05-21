@@ -1,6 +1,5 @@
 package com.chen.mapper;
 
-import com.chen.entity.GeneralConfirmDataRepayment;
 import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
