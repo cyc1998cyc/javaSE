@@ -1,54 +1,55 @@
 package com.chen.mapper;
 
+import com.chen.entity.FqConfirmDataRepayment;
 import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 @Mapper
-public interface ExclusiveConfirmDataRepaymentMapper {
+public interface FqConfirmDataRepaymentMapper {
     /**
      * delete by primary key
-     * @param exclusiveConfirmDataRepaymentId primaryKey
+     * @param fqConfirmDataRepaymentId primaryKey
      * @return deleteCount
      */
-    int deleteByPrimaryKey(Long exclusiveConfirmDataRepaymentId);
+    int deleteByPrimaryKey(String fqConfirmDataRepaymentId);
 
     /**
      * insert record to table
      * @param record the record
      * @return insert count
      */
-    int insert(ExclusiveConfirmDataRepayment record);
+    int insert(FqConfirmDataRepayment record);
 
     /**
      * insert record to table selective
      * @param record the record
      * @return insert count
      */
-    int insertSelective(ExclusiveConfirmDataRepayment record);
+    int insertSelective(FqConfirmDataRepayment record);
 
     /**
      * select by primary key
-     * @param exclusiveConfirmDataRepaymentId primary key
+     * @param fqConfirmDataRepaymentId primary key
      * @return object by primary key
      */
-    ExclusiveConfirmDataRepayment selectByPrimaryKey(Long exclusiveConfirmDataRepaymentId);
+    FqConfirmDataRepayment selectByPrimaryKey(String fqConfirmDataRepaymentId);
 
     /**
      * update record selective
      * @param record the updated record
      * @return update count
      */
-    int updateByPrimaryKeySelective(ExclusiveConfirmDataRepayment record);
+    int updateByPrimaryKeySelective(FqConfirmDataRepayment record);
 
     /**
      * update record
      * @param record the updated record
      * @return update count
      */
-    int updateByPrimaryKey(ExclusiveConfirmDataRepayment record);
+    int updateByPrimaryKey(FqConfirmDataRepayment record);
 
-    int updateBatch(List<ExclusiveConfirmDataRepayment> list);
+    int updateBatch(List<FqConfirmDataRepayment> list);
 
-    int batchInsert(@Param("list") List<ExclusiveConfirmDataRepayment> list);
+    int batchInsert(@Param("list") List<FqConfirmDataRepayment> list);
 }

@@ -8,18 +8,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/test")
 public class TestController {
 
-    @Autowired
-    private EasyConfirmDataRepaymentService easyConfirmDataRepaymentService;
-
-    @RequestMapping("/batchInsert")
-    public String batchInsertByThread(){
-        EasyConfirmDataRepayment easyConfirmDataRepayment = new EasyConfirmDataRepayment();
-        easyConfirmDataRepayment.setEasyConfirmDataRepaymentId(1231233212L);
-        easyConfirmDataRepaymentService.insert(easyConfirmDataRepayment);
-
-
-        return "success";
-    }
+//    @Autowired
+//    private EasyConfirmDataRepaymentService easyConfirmDataRepaymentService;
+//
+//    @RequestMapping("/batchInsert")
+//    public String batchInsertByThread(){
+//        EasyConfirmDataRepayment easyConfirmDataRepayment = new EasyConfirmDataRepayment();
+//        easyConfirmDataRepayment.setEasyConfirmDataRepaymentId(1231233212L);
+//        easyConfirmDataRepaymentService.insert(easyConfirmDataRepayment);
+//
+//
+//        return "success";
+//    }
 
 
 

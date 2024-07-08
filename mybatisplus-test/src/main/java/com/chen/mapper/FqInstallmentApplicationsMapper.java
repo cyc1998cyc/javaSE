@@ -1,5 +1,6 @@
 package com.chen.mapper;
 
+import com.chen.entity.FqInstallmentApplications;
 import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -11,7 +12,7 @@ public interface FqInstallmentApplicationsMapper {
      * @param fqInstallmentApplicationsId primaryKey
      * @return deleteCount
      */
-    int deleteByPrimaryKey(Long fqInstallmentApplicationsId);
+    int deleteByPrimaryKey(String fqInstallmentApplicationsId);
 
     /**
      * insert record to table
@@ -32,7 +33,7 @@ public interface FqInstallmentApplicationsMapper {
      * @param fqInstallmentApplicationsId primary key
      * @return object by primary key
      */
-    FqInstallmentApplications selectByPrimaryKey(Long fqInstallmentApplicationsId);
+    FqInstallmentApplications selectByPrimaryKey(String fqInstallmentApplicationsId);
 
     /**
      * update record selective

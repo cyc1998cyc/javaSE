@@ -1,0 +1,1507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chen.mapper.FqConfirmDataRepaymentMapper">
+  <resultMap id="BaseResultMap" type="com.chen.entity.FqConfirmDataRepayment">
+    <!--@mbg.generated-->
+    <!--@Table fq_confirm_data_repayment-->
+    <id column="fq_confirm_data_repayment_id" jdbcType="VARCHAR" property="fqConfirmDataRepaymentId" />
+    <result column="bank" jdbcType="VARCHAR" property="bank" />
+    <result column="account" jdbcType="VARCHAR" property="account" />
+    <result column="card_nbr" jdbcType="VARCHAR" property="cardNbr" />
+    <result column="card_bin" jdbcType="VARCHAR" property="cardBin" />
+    <result column="cardholder" jdbcType="VARCHAR" property="cardholder" />
+    <result column="mp_number" jdbcType="VARCHAR" property="mpNumber" />
+    <result column="inp_day" jdbcType="VARCHAR" property="inpDay" />
+    <result column="inp_time" jdbcType="VARCHAR" property="inpTime" />
+    <result column="auth_code" jdbcType="VARCHAR" property="authCode" />
+    <result column="merchant" jdbcType="VARCHAR" property="merchant" />
+    <result column="micro_ref" jdbcType="VARCHAR" property="microRef" />
+    <result column="product" jdbcType="VARCHAR" property="product" />
+    <result column="purch_day" jdbcType="VARCHAR" property="purchDay" />
+    <result column="react_resn" jdbcType="VARCHAR" property="reactResn" />
+    <result column="prod_id" jdbcType="VARCHAR" property="prodId" />
+    <result column="int_rate" jdbcType="VARCHAR" property="intRate" />
+    <result column="accel_int" jdbcType="VARCHAR" property="accelInt" />
+    <result column="accel_resn" jdbcType="VARCHAR" property="accelResn" />
+    <result column="check_dig" jdbcType="VARCHAR" property="checkDig" />
+    <result column="issue_nbr" jdbcType="VARCHAR" property="issueNbr" />
+    <result column="first_int" jdbcType="VARCHAR" property="firstInt" />
+    <result column="mth_instl" jdbcType="VARCHAR" property="mthInstl" />
+    <result column="instl_cnt" jdbcType="VARCHAR" property="instlCnt" />
+    <result column="lst_instdy" jdbcType="VARCHAR" property="lstInstdy" />
+    <result column="mth_int" jdbcType="VARCHAR" property="mthInt" />
+    <result column="mth_ppl" jdbcType="VARCHAR" property="mthPpl" />
+    <result column="nbr_mths" jdbcType="VARCHAR" property="nbrMths" />
+    <result column="orig_purch" jdbcType="VARCHAR" property="origPurch" />
+    <result column="rem_ppl" jdbcType="VARCHAR" property="remPpl" />
+    <result column="orig_int" jdbcType="VARCHAR" property="origInt" />
+    <result column="tot_int_cg" jdbcType="VARCHAR" property="totIntCg" />
+    <result column="rem_int" jdbcType="VARCHAR" property="remInt" />
+    <result column="orig_fee" jdbcType="VARCHAR" property="origFee" />
+    <result column="rem_fee" jdbcType="VARCHAR" property="remFee" />
+    <result column="trans_src" jdbcType="VARCHAR" property="transSrc" />
+    <result column="status_pre" jdbcType="VARCHAR" property="statusPre" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="status_day" jdbcType="VARCHAR" property="statusDay" />
+    <result column="comm_amt" jdbcType="VARCHAR" property="commAmt" />
+    <result column="employee" jdbcType="VARCHAR" property="employee" />
+    <result column="fee_flag" jdbcType="VARCHAR" property="feeFlag" />
+    <result column="addr_type" jdbcType="VARCHAR" property="addrType" />
+    <result column="credp_id" jdbcType="VARCHAR" property="credpId" />
+    <result column="mp_type" jdbcType="VARCHAR" property="mpType" />
+    <result column="pause_nbrs" jdbcType="VARCHAR" property="pauseNbrs" />
+    <result column="delay_mth" jdbcType="VARCHAR" property="delayMth" />
+    <result column="curr_num" jdbcType="VARCHAR" property="currNum" />
+    <result column="addr1" jdbcType="VARCHAR" property="addr1" />
+    <result column="addr2" jdbcType="VARCHAR" property="addr2" />
+    <result column="addr3" jdbcType="VARCHAR" property="addr3" />
+    <result column="addr4" jdbcType="VARCHAR" property="addr4" />
+    <result column="res_ppl" jdbcType="VARCHAR" property="resPpl" />
+    <result column="inter_mths" jdbcType="VARCHAR" property="interMths" />
+    <result column="paycf_day" jdbcType="VARCHAR" property="paycfDay" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="inp_src" jdbcType="VARCHAR" property="inpSrc" />
+    <result column="pri_dldy" jdbcType="VARCHAR" property="priDldy" />
+    <result column="dly_days" jdbcType="VARCHAR" property="dlyDays" />
+    <result column="etl_day" jdbcType="VARCHAR" property="etlDay" />
+    <result column="dedu_fee" jdbcType="VARCHAR" property="deduFee" />
+    <result column="app_sday_new" jdbcType="VARCHAR" property="appSdayNew" />
+    <result column="mark_day" jdbcType="VARCHAR" property="markDay" />
+    <result column="rem_feey" jdbcType="VARCHAR" property="remFeey" />
+    <result column="sublmt_nbr" jdbcType="VARCHAR" property="sublmtNbr" />
+    <result column="fee_pcnt" jdbcType="VARCHAR" property="feePcnt" />
+    <result column="fee_mths" jdbcType="VARCHAR" property="feeMths" />
+    <result column="chanelno" jdbcType="VARCHAR" property="chanelno" />
+    <result column="mp_irr_yr" jdbcType="VARCHAR" property="mpIrrYr" />
+    <result column="remark2" jdbcType="VARCHAR" property="remark2" />
+    <result column="rem_pply" jdbcType="VARCHAR" property="remPply" />
+    <result column="res_pply" jdbcType="VARCHAR" property="resPply" />
+    <result column="dly_flag" jdbcType="VARCHAR" property="dlyFlag" />
+    <result column="fst_instdy" jdbcType="VARCHAR" property="fstInstdy" />
+    <result column="mth_fee" jdbcType="VARCHAR" property="mthFee" />
+    <result column="clpps" jdbcType="VARCHAR" property="clpps" />
+    <result column="rel_merch" jdbcType="VARCHAR" property="relMerch" />
+    <result column="fee_pcnt_new" jdbcType="VARCHAR" property="feePcntNew" />
+    <result column="cal_name" jdbcType="VARCHAR" property="calName" />
+    <result column="rem_inty" jdbcType="VARCHAR" property="remInty" />
+    <result column="contractno" jdbcType="VARCHAR" property="contractno" />
+    <result column="merch_fee" jdbcType="VARCHAR" property="merchFee" />
+    <result column="inst_intfe" jdbcType="VARCHAR" property="instIntfe" />
+    <result column="txt_date" jdbcType="DATE" property="txtDate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    fq_confirm_data_repayment_id, bank, account, card_nbr, card_bin, cardholder, mp_number, 
+    inp_day, inp_time, auth_code, merchant, micro_ref, product, purch_day, react_resn, 
+    prod_id, int_rate, accel_int, accel_resn, check_dig, issue_nbr, first_int, mth_instl, 
+    instl_cnt, lst_instdy, mth_int, mth_ppl, nbr_mths, orig_purch, rem_ppl, orig_int, 
+    tot_int_cg, rem_int, orig_fee, rem_fee, trans_src, status_pre, `status`, status_day, 
+    comm_amt, employee, fee_flag, addr_type, credp_id, mp_type, pause_nbrs, delay_mth, 
+    curr_num, addr1, addr2, addr3, addr4, res_ppl, inter_mths, paycf_day, remark, inp_src, 
+    pri_dldy, dly_days, etl_day, dedu_fee, app_sday_new, mark_day, rem_feey, sublmt_nbr, 
+    fee_pcnt, fee_mths, chanelno, mp_irr_yr, remark2, rem_pply, res_pply, dly_flag, fst_instdy, 
+    mth_fee, clpps, rel_merch, fee_pcnt_new, cal_name, rem_inty, contractno, merch_fee, 
+    inst_intfe, txt_date
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from fq_confirm_data_repayment
+    where fq_confirm_data_repayment_id = #{fqConfirmDataRepaymentId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from fq_confirm_data_repayment
+    where fq_confirm_data_repayment_id = #{fqConfirmDataRepaymentId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.chen.entity.FqConfirmDataRepayment">
+    <!--@mbg.generated-->
+    insert into fq_confirm_data_repayment (fq_confirm_data_repayment_id, bank, account, 
+      card_nbr, card_bin, cardholder, 
+      mp_number, inp_day, inp_time, 
+      auth_code, merchant, micro_ref, 
+      product, purch_day, react_resn, 
+      prod_id, int_rate, accel_int, 
+      accel_resn, check_dig, issue_nbr, 
+      first_int, mth_instl, instl_cnt, 
+      lst_instdy, mth_int, mth_ppl, 
+      nbr_mths, orig_purch, rem_ppl, 
+      orig_int, tot_int_cg, rem_int, 
+      orig_fee, rem_fee, trans_src, 
+      status_pre, `status`, status_day, 
+      comm_amt, employee, fee_flag, 
+      addr_type, credp_id, mp_type, 
+      pause_nbrs, delay_mth, curr_num, 
+      addr1, addr2, addr3, 
+      addr4, res_ppl, inter_mths, 
+      paycf_day, remark, inp_src, 
+      pri_dldy, dly_days, etl_day, 
+      dedu_fee, app_sday_new, mark_day, 
+      rem_feey, sublmt_nbr, fee_pcnt, 
+      fee_mths, chanelno, mp_irr_yr, 
+      remark2, rem_pply, res_pply, 
+      dly_flag, fst_instdy, mth_fee, 
+      clpps, rel_merch, fee_pcnt_new, 
+      cal_name, rem_inty, contractno, 
+      merch_fee, inst_intfe, txt_date
+      )
+    values (#{fqConfirmDataRepaymentId,jdbcType=VARCHAR}, #{bank,jdbcType=VARCHAR}, #{account,jdbcType=VARCHAR}, 
+      #{cardNbr,jdbcType=VARCHAR}, #{cardBin,jdbcType=VARCHAR}, #{cardholder,jdbcType=VARCHAR}, 
+      #{mpNumber,jdbcType=VARCHAR}, #{inpDay,jdbcType=VARCHAR}, #{inpTime,jdbcType=VARCHAR}, 
+      #{authCode,jdbcType=VARCHAR}, #{merchant,jdbcType=VARCHAR}, #{microRef,jdbcType=VARCHAR}, 
+      #{product,jdbcType=VARCHAR}, #{purchDay,jdbcType=VARCHAR}, #{reactResn,jdbcType=VARCHAR}, 
+      #{prodId,jdbcType=VARCHAR}, #{intRate,jdbcType=VARCHAR}, #{accelInt,jdbcType=VARCHAR}, 
+      #{accelResn,jdbcType=VARCHAR}, #{checkDig,jdbcType=VARCHAR}, #{issueNbr,jdbcType=VARCHAR}, 
+      #{firstInt,jdbcType=VARCHAR}, #{mthInstl,jdbcType=VARCHAR}, #{instlCnt,jdbcType=VARCHAR}, 
+      #{lstInstdy,jdbcType=VARCHAR}, #{mthInt,jdbcType=VARCHAR}, #{mthPpl,jdbcType=VARCHAR}, 
+      #{nbrMths,jdbcType=VARCHAR}, #{origPurch,jdbcType=VARCHAR}, #{remPpl,jdbcType=VARCHAR}, 
+      #{origInt,jdbcType=VARCHAR}, #{totIntCg,jdbcType=VARCHAR}, #{remInt,jdbcType=VARCHAR}, 
+      #{origFee,jdbcType=VARCHAR}, #{remFee,jdbcType=VARCHAR}, #{transSrc,jdbcType=VARCHAR}, 
+      #{statusPre,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{statusDay,jdbcType=VARCHAR}, 
+      #{commAmt,jdbcType=VARCHAR}, #{employee,jdbcType=VARCHAR}, #{feeFlag,jdbcType=VARCHAR}, 
+      #{addrType,jdbcType=VARCHAR}, #{credpId,jdbcType=VARCHAR}, #{mpType,jdbcType=VARCHAR}, 
+      #{pauseNbrs,jdbcType=VARCHAR}, #{delayMth,jdbcType=VARCHAR}, #{currNum,jdbcType=VARCHAR}, 
+      #{addr1,jdbcType=VARCHAR}, #{addr2,jdbcType=VARCHAR}, #{addr3,jdbcType=VARCHAR}, 
+      #{addr4,jdbcType=VARCHAR}, #{resPpl,jdbcType=VARCHAR}, #{interMths,jdbcType=VARCHAR}, 
+      #{paycfDay,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{inpSrc,jdbcType=VARCHAR}, 
+      #{priDldy,jdbcType=VARCHAR}, #{dlyDays,jdbcType=VARCHAR}, #{etlDay,jdbcType=VARCHAR}, 
+      #{deduFee,jdbcType=VARCHAR}, #{appSdayNew,jdbcType=VARCHAR}, #{markDay,jdbcType=VARCHAR}, 
+      #{remFeey,jdbcType=VARCHAR}, #{sublmtNbr,jdbcType=VARCHAR}, #{feePcnt,jdbcType=VARCHAR}, 
+      #{feeMths,jdbcType=VARCHAR}, #{chanelno,jdbcType=VARCHAR}, #{mpIrrYr,jdbcType=VARCHAR}, 
+      #{remark2,jdbcType=VARCHAR}, #{remPply,jdbcType=VARCHAR}, #{resPply,jdbcType=VARCHAR}, 
+      #{dlyFlag,jdbcType=VARCHAR}, #{fstInstdy,jdbcType=VARCHAR}, #{mthFee,jdbcType=VARCHAR}, 
+      #{clpps,jdbcType=VARCHAR}, #{relMerch,jdbcType=VARCHAR}, #{feePcntNew,jdbcType=VARCHAR}, 
+      #{calName,jdbcType=VARCHAR}, #{remInty,jdbcType=VARCHAR}, #{contractno,jdbcType=VARCHAR}, 
+      #{merchFee,jdbcType=VARCHAR}, #{instIntfe,jdbcType=VARCHAR}, #{txtDate,jdbcType=DATE}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.chen.entity.FqConfirmDataRepayment">
+    <!--@mbg.generated-->
+    insert into fq_confirm_data_repayment
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fqConfirmDataRepaymentId != null">
+        fq_confirm_data_repayment_id,
+      </if>
+      <if test="bank != null">
+        bank,
+      </if>
+      <if test="account != null">
+        account,
+      </if>
+      <if test="cardNbr != null">
+        card_nbr,
+      </if>
+      <if test="cardBin != null">
+        card_bin,
+      </if>
+      <if test="cardholder != null">
+        cardholder,
+      </if>
+      <if test="mpNumber != null">
+        mp_number,
+      </if>
+      <if test="inpDay != null">
+        inp_day,
+      </if>
+      <if test="inpTime != null">
+        inp_time,
+      </if>
+      <if test="authCode != null">
+        auth_code,
+      </if>
+      <if test="merchant != null">
+        merchant,
+      </if>
+      <if test="microRef != null">
+        micro_ref,
+      </if>
+      <if test="product != null">
+        product,
+      </if>
+      <if test="purchDay != null">
+        purch_day,
+      </if>
+      <if test="reactResn != null">
+        react_resn,
+      </if>
+      <if test="prodId != null">
+        prod_id,
+      </if>
+      <if test="intRate != null">
+        int_rate,
+      </if>
+      <if test="accelInt != null">
+        accel_int,
+      </if>
+      <if test="accelResn != null">
+        accel_resn,
+      </if>
+      <if test="checkDig != null">
+        check_dig,
+      </if>
+      <if test="issueNbr != null">
+        issue_nbr,
+      </if>
+      <if test="firstInt != null">
+        first_int,
+      </if>
+      <if test="mthInstl != null">
+        mth_instl,
+      </if>
+      <if test="instlCnt != null">
+        instl_cnt,
+      </if>
+      <if test="lstInstdy != null">
+        lst_instdy,
+      </if>
+      <if test="mthInt != null">
+        mth_int,
+      </if>
+      <if test="mthPpl != null">
+        mth_ppl,
+      </if>
+      <if test="nbrMths != null">
+        nbr_mths,
+      </if>
+      <if test="origPurch != null">
+        orig_purch,
+      </if>
+      <if test="remPpl != null">
+        rem_ppl,
+      </if>
+      <if test="origInt != null">
+        orig_int,
+      </if>
+      <if test="totIntCg != null">
+        tot_int_cg,
+      </if>
+      <if test="remInt != null">
+        rem_int,
+      </if>
+      <if test="origFee != null">
+        orig_fee,
+      </if>
+      <if test="remFee != null">
+        rem_fee,
+      </if>
+      <if test="transSrc != null">
+        trans_src,
+      </if>
+      <if test="statusPre != null">
+        status_pre,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+      <if test="statusDay != null">
+        status_day,
+      </if>
+      <if test="commAmt != null">
+        comm_amt,
+      </if>
+      <if test="employee != null">
+        employee,
+      </if>
+      <if test="feeFlag != null">
+        fee_flag,
+      </if>
+      <if test="addrType != null">
+        addr_type,
+      </if>
+      <if test="credpId != null">
+        credp_id,
+      </if>
+      <if test="mpType != null">
+        mp_type,
+      </if>
+      <if test="pauseNbrs != null">
+        pause_nbrs,
+      </if>
+      <if test="delayMth != null">
+        delay_mth,
+      </if>
+      <if test="currNum != null">
+        curr_num,
+      </if>
+      <if test="addr1 != null">
+        addr1,
+      </if>
+      <if test="addr2 != null">
+        addr2,
+      </if>
+      <if test="addr3 != null">
+        addr3,
+      </if>
+      <if test="addr4 != null">
+        addr4,
+      </if>
+      <if test="resPpl != null">
+        res_ppl,
+      </if>
+      <if test="interMths != null">
+        inter_mths,
+      </if>
+      <if test="paycfDay != null">
+        paycf_day,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="inpSrc != null">
+        inp_src,
+      </if>
+      <if test="priDldy != null">
+        pri_dldy,
+      </if>
+      <if test="dlyDays != null">
+        dly_days,
+      </if>
+      <if test="etlDay != null">
+        etl_day,
+      </if>
+      <if test="deduFee != null">
+        dedu_fee,
+      </if>
+      <if test="appSdayNew != null">
+        app_sday_new,
+      </if>
+      <if test="markDay != null">
+        mark_day,
+      </if>
+      <if test="remFeey != null">
+        rem_feey,
+      </if>
+      <if test="sublmtNbr != null">
+        sublmt_nbr,
+      </if>
+      <if test="feePcnt != null">
+        fee_pcnt,
+      </if>
+      <if test="feeMths != null">
+        fee_mths,
+      </if>
+      <if test="chanelno != null">
+        chanelno,
+      </if>
+      <if test="mpIrrYr != null">
+        mp_irr_yr,
+      </if>
+      <if test="remark2 != null">
+        remark2,
+      </if>
+      <if test="remPply != null">
+        rem_pply,
+      </if>
+      <if test="resPply != null">
+        res_pply,
+      </if>
+      <if test="dlyFlag != null">
+        dly_flag,
+      </if>
+      <if test="fstInstdy != null">
+        fst_instdy,
+      </if>
+      <if test="mthFee != null">
+        mth_fee,
+      </if>
+      <if test="clpps != null">
+        clpps,
+      </if>
+      <if test="relMerch != null">
+        rel_merch,
+      </if>
+      <if test="feePcntNew != null">
+        fee_pcnt_new,
+      </if>
+      <if test="calName != null">
+        cal_name,
+      </if>
+      <if test="remInty != null">
+        rem_inty,
+      </if>
+      <if test="contractno != null">
+        contractno,
+      </if>
+      <if test="merchFee != null">
+        merch_fee,
+      </if>
+      <if test="instIntfe != null">
+        inst_intfe,
+      </if>
+      <if test="txtDate != null">
+        txt_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fqConfirmDataRepaymentId != null">
+        #{fqConfirmDataRepaymentId,jdbcType=VARCHAR},
+      </if>
+      <if test="bank != null">
+        #{bank,jdbcType=VARCHAR},
+      </if>
+      <if test="account != null">
+        #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="cardNbr != null">
+        #{cardNbr,jdbcType=VARCHAR},
+      </if>
+      <if test="cardBin != null">
+        #{cardBin,jdbcType=VARCHAR},
+      </if>
+      <if test="cardholder != null">
+        #{cardholder,jdbcType=VARCHAR},
+      </if>
+      <if test="mpNumber != null">
+        #{mpNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="inpDay != null">
+        #{inpDay,jdbcType=VARCHAR},
+      </if>
+      <if test="inpTime != null">
+        #{inpTime,jdbcType=VARCHAR},
+      </if>
+      <if test="authCode != null">
+        #{authCode,jdbcType=VARCHAR},
+      </if>
+      <if test="merchant != null">
+        #{merchant,jdbcType=VARCHAR},
+      </if>
+      <if test="microRef != null">
+        #{microRef,jdbcType=VARCHAR},
+      </if>
+      <if test="product != null">
+        #{product,jdbcType=VARCHAR},
+      </if>
+      <if test="purchDay != null">
+        #{purchDay,jdbcType=VARCHAR},
+      </if>
+      <if test="reactResn != null">
+        #{reactResn,jdbcType=VARCHAR},
+      </if>
+      <if test="prodId != null">
+        #{prodId,jdbcType=VARCHAR},
+      </if>
+      <if test="intRate != null">
+        #{intRate,jdbcType=VARCHAR},
+      </if>
+      <if test="accelInt != null">
+        #{accelInt,jdbcType=VARCHAR},
+      </if>
+      <if test="accelResn != null">
+        #{accelResn,jdbcType=VARCHAR},
+      </if>
+      <if test="checkDig != null">
+        #{checkDig,jdbcType=VARCHAR},
+      </if>
+      <if test="issueNbr != null">
+        #{issueNbr,jdbcType=VARCHAR},
+      </if>
+      <if test="firstInt != null">
+        #{firstInt,jdbcType=VARCHAR},
+      </if>
+      <if test="mthInstl != null">
+        #{mthInstl,jdbcType=VARCHAR},
+      </if>
+      <if test="instlCnt != null">
+        #{instlCnt,jdbcType=VARCHAR},
+      </if>
+      <if test="lstInstdy != null">
+        #{lstInstdy,jdbcType=VARCHAR},
+      </if>
+      <if test="mthInt != null">
+        #{mthInt,jdbcType=VARCHAR},
+      </if>
+      <if test="mthPpl != null">
+        #{mthPpl,jdbcType=VARCHAR},
+      </if>
+      <if test="nbrMths != null">
+        #{nbrMths,jdbcType=VARCHAR},
+      </if>
+      <if test="origPurch != null">
+        #{origPurch,jdbcType=VARCHAR},
+      </if>
+      <if test="remPpl != null">
+        #{remPpl,jdbcType=VARCHAR},
+      </if>
+      <if test="origInt != null">
+        #{origInt,jdbcType=VARCHAR},
+      </if>
+      <if test="totIntCg != null">
+        #{totIntCg,jdbcType=VARCHAR},
+      </if>
+      <if test="remInt != null">
+        #{remInt,jdbcType=VARCHAR},
+      </if>
+      <if test="origFee != null">
+        #{origFee,jdbcType=VARCHAR},
+      </if>
+      <if test="remFee != null">
+        #{remFee,jdbcType=VARCHAR},
+      </if>
+      <if test="transSrc != null">
+        #{transSrc,jdbcType=VARCHAR},
+      </if>
+      <if test="statusPre != null">
+        #{statusPre,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="statusDay != null">
+        #{statusDay,jdbcType=VARCHAR},
+      </if>
+      <if test="commAmt != null">
+        #{commAmt,jdbcType=VARCHAR},
+      </if>
+      <if test="employee != null">
+        #{employee,jdbcType=VARCHAR},
+      </if>
+      <if test="feeFlag != null">
+        #{feeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="addrType != null">
+        #{addrType,jdbcType=VARCHAR},
+      </if>
+      <if test="credpId != null">
+        #{credpId,jdbcType=VARCHAR},
+      </if>
+      <if test="mpType != null">
+        #{mpType,jdbcType=VARCHAR},
+      </if>
+      <if test="pauseNbrs != null">
+        #{pauseNbrs,jdbcType=VARCHAR},
+      </if>
+      <if test="delayMth != null">
+        #{delayMth,jdbcType=VARCHAR},
+      </if>
+      <if test="currNum != null">
+        #{currNum,jdbcType=VARCHAR},
+      </if>
+      <if test="addr1 != null">
+        #{addr1,jdbcType=VARCHAR},
+      </if>
+      <if test="addr2 != null">
+        #{addr2,jdbcType=VARCHAR},
+      </if>
+      <if test="addr3 != null">
+        #{addr3,jdbcType=VARCHAR},
+      </if>
+      <if test="addr4 != null">
+        #{addr4,jdbcType=VARCHAR},
+      </if>
+      <if test="resPpl != null">
+        #{resPpl,jdbcType=VARCHAR},
+      </if>
+      <if test="interMths != null">
+        #{interMths,jdbcType=VARCHAR},
+      </if>
+      <if test="paycfDay != null">
+        #{paycfDay,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="inpSrc != null">
+        #{inpSrc,jdbcType=VARCHAR},
+      </if>
+      <if test="priDldy != null">
+        #{priDldy,jdbcType=VARCHAR},
+      </if>
+      <if test="dlyDays != null">
+        #{dlyDays,jdbcType=VARCHAR},
+      </if>
+      <if test="etlDay != null">
+        #{etlDay,jdbcType=VARCHAR},
+      </if>
+      <if test="deduFee != null">
+        #{deduFee,jdbcType=VARCHAR},
+      </if>
+      <if test="appSdayNew != null">
+        #{appSdayNew,jdbcType=VARCHAR},
+      </if>
+      <if test="markDay != null">
+        #{markDay,jdbcType=VARCHAR},
+      </if>
+      <if test="remFeey != null">
+        #{remFeey,jdbcType=VARCHAR},
+      </if>
+      <if test="sublmtNbr != null">
+        #{sublmtNbr,jdbcType=VARCHAR},
+      </if>
+      <if test="feePcnt != null">
+        #{feePcnt,jdbcType=VARCHAR},
+      </if>
+      <if test="feeMths != null">
+        #{feeMths,jdbcType=VARCHAR},
+      </if>
+      <if test="chanelno != null">
+        #{chanelno,jdbcType=VARCHAR},
+      </if>
+      <if test="mpIrrYr != null">
+        #{mpIrrYr,jdbcType=VARCHAR},
+      </if>
+      <if test="remark2 != null">
+        #{remark2,jdbcType=VARCHAR},
+      </if>
+      <if test="remPply != null">
+        #{remPply,jdbcType=VARCHAR},
+      </if>
+      <if test="resPply != null">
+        #{resPply,jdbcType=VARCHAR},
+      </if>
+      <if test="dlyFlag != null">
+        #{dlyFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="fstInstdy != null">
+        #{fstInstdy,jdbcType=VARCHAR},
+      </if>
+      <if test="mthFee != null">
+        #{mthFee,jdbcType=VARCHAR},
+      </if>
+      <if test="clpps != null">
+        #{clpps,jdbcType=VARCHAR},
+      </if>
+      <if test="relMerch != null">
+        #{relMerch,jdbcType=VARCHAR},
+      </if>
+      <if test="feePcntNew != null">
+        #{feePcntNew,jdbcType=VARCHAR},
+      </if>
+      <if test="calName != null">
+        #{calName,jdbcType=VARCHAR},
+      </if>
+      <if test="remInty != null">
+        #{remInty,jdbcType=VARCHAR},
+      </if>
+      <if test="contractno != null">
+        #{contractno,jdbcType=VARCHAR},
+      </if>
+      <if test="merchFee != null">
+        #{merchFee,jdbcType=VARCHAR},
+      </if>
+      <if test="instIntfe != null">
+        #{instIntfe,jdbcType=VARCHAR},
+      </if>
+      <if test="txtDate != null">
+        #{txtDate,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.chen.entity.FqConfirmDataRepayment">
+    <!--@mbg.generated-->
+    update fq_confirm_data_repayment
+    <set>
+      <if test="bank != null">
+        bank = #{bank,jdbcType=VARCHAR},
+      </if>
+      <if test="account != null">
+        account = #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="cardNbr != null">
+        card_nbr = #{cardNbr,jdbcType=VARCHAR},
+      </if>
+      <if test="cardBin != null">
+        card_bin = #{cardBin,jdbcType=VARCHAR},
+      </if>
+      <if test="cardholder != null">
+        cardholder = #{cardholder,jdbcType=VARCHAR},
+      </if>
+      <if test="mpNumber != null">
+        mp_number = #{mpNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="inpDay != null">
+        inp_day = #{inpDay,jdbcType=VARCHAR},
+      </if>
+      <if test="inpTime != null">
+        inp_time = #{inpTime,jdbcType=VARCHAR},
+      </if>
+      <if test="authCode != null">
+        auth_code = #{authCode,jdbcType=VARCHAR},
+      </if>
+      <if test="merchant != null">
+        merchant = #{merchant,jdbcType=VARCHAR},
+      </if>
+      <if test="microRef != null">
+        micro_ref = #{microRef,jdbcType=VARCHAR},
+      </if>
+      <if test="product != null">
+        product = #{product,jdbcType=VARCHAR},
+      </if>
+      <if test="purchDay != null">
+        purch_day = #{purchDay,jdbcType=VARCHAR},
+      </if>
+      <if test="reactResn != null">
+        react_resn = #{reactResn,jdbcType=VARCHAR},
+      </if>
+      <if test="prodId != null">
+        prod_id = #{prodId,jdbcType=VARCHAR},
+      </if>
+      <if test="intRate != null">
+        int_rate = #{intRate,jdbcType=VARCHAR},
+      </if>
+      <if test="accelInt != null">
+        accel_int = #{accelInt,jdbcType=VARCHAR},
+      </if>
+      <if test="accelResn != null">
+        accel_resn = #{accelResn,jdbcType=VARCHAR},
+      </if>
+      <if test="checkDig != null">
+        check_dig = #{checkDig,jdbcType=VARCHAR},
+      </if>
+      <if test="issueNbr != null">
+        issue_nbr = #{issueNbr,jdbcType=VARCHAR},
+      </if>
+      <if test="firstInt != null">
+        first_int = #{firstInt,jdbcType=VARCHAR},
+      </if>
+      <if test="mthInstl != null">
+        mth_instl = #{mthInstl,jdbcType=VARCHAR},
+      </if>
+      <if test="instlCnt != null">
+        instl_cnt = #{instlCnt,jdbcType=VARCHAR},
+      </if>
+      <if test="lstInstdy != null">
+        lst_instdy = #{lstInstdy,jdbcType=VARCHAR},
+      </if>
+      <if test="mthInt != null">
+        mth_int = #{mthInt,jdbcType=VARCHAR},
+      </if>
+      <if test="mthPpl != null">
+        mth_ppl = #{mthPpl,jdbcType=VARCHAR},
+      </if>
+      <if test="nbrMths != null">
+        nbr_mths = #{nbrMths,jdbcType=VARCHAR},
+      </if>
+      <if test="origPurch != null">
+        orig_purch = #{origPurch,jdbcType=VARCHAR},
+      </if>
+      <if test="remPpl != null">
+        rem_ppl = #{remPpl,jdbcType=VARCHAR},
+      </if>
+      <if test="origInt != null">
+        orig_int = #{origInt,jdbcType=VARCHAR},
+      </if>
+      <if test="totIntCg != null">
+        tot_int_cg = #{totIntCg,jdbcType=VARCHAR},
+      </if>
+      <if test="remInt != null">
+        rem_int = #{remInt,jdbcType=VARCHAR},
+      </if>
+      <if test="origFee != null">
+        orig_fee = #{origFee,jdbcType=VARCHAR},
+      </if>
+      <if test="remFee != null">
+        rem_fee = #{remFee,jdbcType=VARCHAR},
+      </if>
+      <if test="transSrc != null">
+        trans_src = #{transSrc,jdbcType=VARCHAR},
+      </if>
+      <if test="statusPre != null">
+        status_pre = #{statusPre,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        `status` = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="statusDay != null">
+        status_day = #{statusDay,jdbcType=VARCHAR},
+      </if>
+      <if test="commAmt != null">
+        comm_amt = #{commAmt,jdbcType=VARCHAR},
+      </if>
+      <if test="employee != null">
+        employee = #{employee,jdbcType=VARCHAR},
+      </if>
+      <if test="feeFlag != null">
+        fee_flag = #{feeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="addrType != null">
+        addr_type = #{addrType,jdbcType=VARCHAR},
+      </if>
+      <if test="credpId != null">
+        credp_id = #{credpId,jdbcType=VARCHAR},
+      </if>
+      <if test="mpType != null">
+        mp_type = #{mpType,jdbcType=VARCHAR},
+      </if>
+      <if test="pauseNbrs != null">
+        pause_nbrs = #{pauseNbrs,jdbcType=VARCHAR},
+      </if>
+      <if test="delayMth != null">
+        delay_mth = #{delayMth,jdbcType=VARCHAR},
+      </if>
+      <if test="currNum != null">
+        curr_num = #{currNum,jdbcType=VARCHAR},
+      </if>
+      <if test="addr1 != null">
+        addr1 = #{addr1,jdbcType=VARCHAR},
+      </if>
+      <if test="addr2 != null">
+        addr2 = #{addr2,jdbcType=VARCHAR},
+      </if>
+      <if test="addr3 != null">
+        addr3 = #{addr3,jdbcType=VARCHAR},
+      </if>
+      <if test="addr4 != null">
+        addr4 = #{addr4,jdbcType=VARCHAR},
+      </if>
+      <if test="resPpl != null">
+        res_ppl = #{resPpl,jdbcType=VARCHAR},
+      </if>
+      <if test="interMths != null">
+        inter_mths = #{interMths,jdbcType=VARCHAR},
+      </if>
+      <if test="paycfDay != null">
+        paycf_day = #{paycfDay,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="inpSrc != null">
+        inp_src = #{inpSrc,jdbcType=VARCHAR},
+      </if>
+      <if test="priDldy != null">
+        pri_dldy = #{priDldy,jdbcType=VARCHAR},
+      </if>
+      <if test="dlyDays != null">
+        dly_days = #{dlyDays,jdbcType=VARCHAR},
+      </if>
+      <if test="etlDay != null">
+        etl_day = #{etlDay,jdbcType=VARCHAR},
+      </if>
+      <if test="deduFee != null">
+        dedu_fee = #{deduFee,jdbcType=VARCHAR},
+      </if>
+      <if test="appSdayNew != null">
+        app_sday_new = #{appSdayNew,jdbcType=VARCHAR},
+      </if>
+      <if test="markDay != null">
+        mark_day = #{markDay,jdbcType=VARCHAR},
+      </if>
+      <if test="remFeey != null">
+        rem_feey = #{remFeey,jdbcType=VARCHAR},
+      </if>
+      <if test="sublmtNbr != null">
+        sublmt_nbr = #{sublmtNbr,jdbcType=VARCHAR},
+      </if>
+      <if test="feePcnt != null">
+        fee_pcnt = #{feePcnt,jdbcType=VARCHAR},
+      </if>
+      <if test="feeMths != null">
+        fee_mths = #{feeMths,jdbcType=VARCHAR},
+      </if>
+      <if test="chanelno != null">
+        chanelno = #{chanelno,jdbcType=VARCHAR},
+      </if>
+      <if test="mpIrrYr != null">
+        mp_irr_yr = #{mpIrrYr,jdbcType=VARCHAR},
+      </if>
+      <if test="remark2 != null">
+        remark2 = #{remark2,jdbcType=VARCHAR},
+      </if>
+      <if test="remPply != null">
+        rem_pply = #{remPply,jdbcType=VARCHAR},
+      </if>
+      <if test="resPply != null">
+        res_pply = #{resPply,jdbcType=VARCHAR},
+      </if>
+      <if test="dlyFlag != null">
+        dly_flag = #{dlyFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="fstInstdy != null">
+        fst_instdy = #{fstInstdy,jdbcType=VARCHAR},
+      </if>
+      <if test="mthFee != null">
+        mth_fee = #{mthFee,jdbcType=VARCHAR},
+      </if>
+      <if test="clpps != null">
+        clpps = #{clpps,jdbcType=VARCHAR},
+      </if>
+      <if test="relMerch != null">
+        rel_merch = #{relMerch,jdbcType=VARCHAR},
+      </if>
+      <if test="feePcntNew != null">
+        fee_pcnt_new = #{feePcntNew,jdbcType=VARCHAR},
+      </if>
+      <if test="calName != null">
+        cal_name = #{calName,jdbcType=VARCHAR},
+      </if>
+      <if test="remInty != null">
+        rem_inty = #{remInty,jdbcType=VARCHAR},
+      </if>
+      <if test="contractno != null">
+        contractno = #{contractno,jdbcType=VARCHAR},
+      </if>
+      <if test="merchFee != null">
+        merch_fee = #{merchFee,jdbcType=VARCHAR},
+      </if>
+      <if test="instIntfe != null">
+        inst_intfe = #{instIntfe,jdbcType=VARCHAR},
+      </if>
+      <if test="txtDate != null">
+        txt_date = #{txtDate,jdbcType=DATE},
+      </if>
+    </set>
+    where fq_confirm_data_repayment_id = #{fqConfirmDataRepaymentId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.chen.entity.FqConfirmDataRepayment">
+    <!--@mbg.generated-->
+    update fq_confirm_data_repayment
+    set bank = #{bank,jdbcType=VARCHAR},
+      account = #{account,jdbcType=VARCHAR},
+      card_nbr = #{cardNbr,jdbcType=VARCHAR},
+      card_bin = #{cardBin,jdbcType=VARCHAR},
+      cardholder = #{cardholder,jdbcType=VARCHAR},
+      mp_number = #{mpNumber,jdbcType=VARCHAR},
+      inp_day = #{inpDay,jdbcType=VARCHAR},
+      inp_time = #{inpTime,jdbcType=VARCHAR},
+      auth_code = #{authCode,jdbcType=VARCHAR},
+      merchant = #{merchant,jdbcType=VARCHAR},
+      micro_ref = #{microRef,jdbcType=VARCHAR},
+      product = #{product,jdbcType=VARCHAR},
+      purch_day = #{purchDay,jdbcType=VARCHAR},
+      react_resn = #{reactResn,jdbcType=VARCHAR},
+      prod_id = #{prodId,jdbcType=VARCHAR},
+      int_rate = #{intRate,jdbcType=VARCHAR},
+      accel_int = #{accelInt,jdbcType=VARCHAR},
+      accel_resn = #{accelResn,jdbcType=VARCHAR},
+      check_dig = #{checkDig,jdbcType=VARCHAR},
+      issue_nbr = #{issueNbr,jdbcType=VARCHAR},
+      first_int = #{firstInt,jdbcType=VARCHAR},
+      mth_instl = #{mthInstl,jdbcType=VARCHAR},
+      instl_cnt = #{instlCnt,jdbcType=VARCHAR},
+      lst_instdy = #{lstInstdy,jdbcType=VARCHAR},
+      mth_int = #{mthInt,jdbcType=VARCHAR},
+      mth_ppl = #{mthPpl,jdbcType=VARCHAR},
+      nbr_mths = #{nbrMths,jdbcType=VARCHAR},
+      orig_purch = #{origPurch,jdbcType=VARCHAR},
+      rem_ppl = #{remPpl,jdbcType=VARCHAR},
+      orig_int = #{origInt,jdbcType=VARCHAR},
+      tot_int_cg = #{totIntCg,jdbcType=VARCHAR},
+      rem_int = #{remInt,jdbcType=VARCHAR},
+      orig_fee = #{origFee,jdbcType=VARCHAR},
+      rem_fee = #{remFee,jdbcType=VARCHAR},
+      trans_src = #{transSrc,jdbcType=VARCHAR},
+      status_pre = #{statusPre,jdbcType=VARCHAR},
+      `status` = #{status,jdbcType=VARCHAR},
+      status_day = #{statusDay,jdbcType=VARCHAR},
+      comm_amt = #{commAmt,jdbcType=VARCHAR},
+      employee = #{employee,jdbcType=VARCHAR},
+      fee_flag = #{feeFlag,jdbcType=VARCHAR},
+      addr_type = #{addrType,jdbcType=VARCHAR},
+      credp_id = #{credpId,jdbcType=VARCHAR},
+      mp_type = #{mpType,jdbcType=VARCHAR},
+      pause_nbrs = #{pauseNbrs,jdbcType=VARCHAR},
+      delay_mth = #{delayMth,jdbcType=VARCHAR},
+      curr_num = #{currNum,jdbcType=VARCHAR},
+      addr1 = #{addr1,jdbcType=VARCHAR},
+      addr2 = #{addr2,jdbcType=VARCHAR},
+      addr3 = #{addr3,jdbcType=VARCHAR},
+      addr4 = #{addr4,jdbcType=VARCHAR},
+      res_ppl = #{resPpl,jdbcType=VARCHAR},
+      inter_mths = #{interMths,jdbcType=VARCHAR},
+      paycf_day = #{paycfDay,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      inp_src = #{inpSrc,jdbcType=VARCHAR},
+      pri_dldy = #{priDldy,jdbcType=VARCHAR},
+      dly_days = #{dlyDays,jdbcType=VARCHAR},
+      etl_day = #{etlDay,jdbcType=VARCHAR},
+      dedu_fee = #{deduFee,jdbcType=VARCHAR},
+      app_sday_new = #{appSdayNew,jdbcType=VARCHAR},
+      mark_day = #{markDay,jdbcType=VARCHAR},
+      rem_feey = #{remFeey,jdbcType=VARCHAR},
+      sublmt_nbr = #{sublmtNbr,jdbcType=VARCHAR},
+      fee_pcnt = #{feePcnt,jdbcType=VARCHAR},
+      fee_mths = #{feeMths,jdbcType=VARCHAR},
+      chanelno = #{chanelno,jdbcType=VARCHAR},
+      mp_irr_yr = #{mpIrrYr,jdbcType=VARCHAR},
+      remark2 = #{remark2,jdbcType=VARCHAR},
+      rem_pply = #{remPply,jdbcType=VARCHAR},
+      res_pply = #{resPply,jdbcType=VARCHAR},
+      dly_flag = #{dlyFlag,jdbcType=VARCHAR},
+      fst_instdy = #{fstInstdy,jdbcType=VARCHAR},
+      mth_fee = #{mthFee,jdbcType=VARCHAR},
+      clpps = #{clpps,jdbcType=VARCHAR},
+      rel_merch = #{relMerch,jdbcType=VARCHAR},
+      fee_pcnt_new = #{feePcntNew,jdbcType=VARCHAR},
+      cal_name = #{calName,jdbcType=VARCHAR},
+      rem_inty = #{remInty,jdbcType=VARCHAR},
+      contractno = #{contractno,jdbcType=VARCHAR},
+      merch_fee = #{merchFee,jdbcType=VARCHAR},
+      inst_intfe = #{instIntfe,jdbcType=VARCHAR},
+      txt_date = #{txtDate,jdbcType=DATE}
+    where fq_confirm_data_repayment_id = #{fqConfirmDataRepaymentId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateBatch" parameterType="java.util.List">
+    <!--@mbg.generated-->
+    update fq_confirm_data_repayment
+    <trim prefix="set" suffixOverrides=",">
+      <trim prefix="bank = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.bank,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="account = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.account,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="card_nbr = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.cardNbr,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="card_bin = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.cardBin,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="cardholder = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.cardholder,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="mp_number = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.mpNumber,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="inp_day = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.inpDay,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="inp_time = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.inpTime,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="auth_code = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.authCode,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="merchant = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.merchant,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="micro_ref = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.microRef,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="product = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.product,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="purch_day = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.purchDay,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="react_resn = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.reactResn,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="prod_id = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.prodId,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="int_rate = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.intRate,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="accel_int = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.accelInt,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="accel_resn = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.accelResn,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="check_dig = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.checkDig,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="issue_nbr = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.issueNbr,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="first_int = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.firstInt,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="mth_instl = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.mthInstl,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="instl_cnt = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.instlCnt,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="lst_instdy = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.lstInstdy,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="mth_int = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.mthInt,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="mth_ppl = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.mthPpl,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="nbr_mths = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.nbrMths,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="orig_purch = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.origPurch,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="rem_ppl = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.remPpl,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="orig_int = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.origInt,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="tot_int_cg = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.totIntCg,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="rem_int = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.remInt,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="orig_fee = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.origFee,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="rem_fee = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.remFee,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="trans_src = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.transSrc,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="status_pre = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.statusPre,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="`status` = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.status,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="status_day = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.statusDay,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="comm_amt = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.commAmt,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="employee = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.employee,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="fee_flag = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.feeFlag,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="addr_type = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.addrType,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="credp_id = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.credpId,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="mp_type = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.mpType,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="pause_nbrs = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.pauseNbrs,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="delay_mth = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.delayMth,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="curr_num = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.currNum,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="addr1 = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.addr1,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="addr2 = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.addr2,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="addr3 = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.addr3,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="addr4 = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.addr4,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="res_ppl = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.resPpl,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="inter_mths = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.interMths,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="paycf_day = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.paycfDay,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="remark = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.remark,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="inp_src = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.inpSrc,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="pri_dldy = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.priDldy,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="dly_days = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.dlyDays,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="etl_day = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.etlDay,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="dedu_fee = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.deduFee,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="app_sday_new = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.appSdayNew,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="mark_day = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.markDay,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="rem_feey = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.remFeey,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="sublmt_nbr = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.sublmtNbr,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="fee_pcnt = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.feePcnt,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="fee_mths = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.feeMths,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="chanelno = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.chanelno,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="mp_irr_yr = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.mpIrrYr,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="remark2 = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.remark2,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="rem_pply = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.remPply,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="res_pply = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.resPply,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="dly_flag = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.dlyFlag,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="fst_instdy = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.fstInstdy,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="mth_fee = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.mthFee,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="clpps = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.clpps,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="rel_merch = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.relMerch,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="fee_pcnt_new = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.feePcntNew,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="cal_name = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.calName,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="rem_inty = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.remInty,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="contractno = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.contractno,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="merch_fee = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.merchFee,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="inst_intfe = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.instIntfe,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="txt_date = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_confirm_data_repayment_id = #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR} then #{item.txtDate,jdbcType=DATE}
+        </foreach>
+      </trim>
+    </trim>
+    where fq_confirm_data_repayment_id in
+    <foreach close=")" collection="list" item="item" open="(" separator=", ">
+      #{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR}
+    </foreach>
+  </update>
+  <insert id="batchInsert" parameterType="map">
+    <!--@mbg.generated-->
+    insert into fq_confirm_data_repayment
+    (fq_confirm_data_repayment_id, bank, account, card_nbr, card_bin, cardholder, mp_number, 
+      inp_day, inp_time, auth_code, merchant, micro_ref, product, purch_day, react_resn, 
+      prod_id, int_rate, accel_int, accel_resn, check_dig, issue_nbr, first_int, mth_instl, 
+      instl_cnt, lst_instdy, mth_int, mth_ppl, nbr_mths, orig_purch, rem_ppl, orig_int, 
+      tot_int_cg, rem_int, orig_fee, rem_fee, trans_src, status_pre, `status`, status_day, 
+      comm_amt, employee, fee_flag, addr_type, credp_id, mp_type, pause_nbrs, delay_mth, 
+      curr_num, addr1, addr2, addr3, addr4, res_ppl, inter_mths, paycf_day, remark, inp_src, 
+      pri_dldy, dly_days, etl_day, dedu_fee, app_sday_new, mark_day, rem_feey, sublmt_nbr, 
+      fee_pcnt, fee_mths, chanelno, mp_irr_yr, remark2, rem_pply, res_pply, dly_flag, 
+      fst_instdy, mth_fee, clpps, rel_merch, fee_pcnt_new, cal_name, rem_inty, contractno, 
+      merch_fee, inst_intfe, txt_date)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.fqConfirmDataRepaymentId,jdbcType=VARCHAR}, #{item.bank,jdbcType=VARCHAR}, 
+        #{item.account,jdbcType=VARCHAR}, #{item.cardNbr,jdbcType=VARCHAR}, #{item.cardBin,jdbcType=VARCHAR}, 
+        #{item.cardholder,jdbcType=VARCHAR}, #{item.mpNumber,jdbcType=VARCHAR}, #{item.inpDay,jdbcType=VARCHAR}, 
+        #{item.inpTime,jdbcType=VARCHAR}, #{item.authCode,jdbcType=VARCHAR}, #{item.merchant,jdbcType=VARCHAR}, 
+        #{item.microRef,jdbcType=VARCHAR}, #{item.product,jdbcType=VARCHAR}, #{item.purchDay,jdbcType=VARCHAR}, 
+        #{item.reactResn,jdbcType=VARCHAR}, #{item.prodId,jdbcType=VARCHAR}, #{item.intRate,jdbcType=VARCHAR}, 
+        #{item.accelInt,jdbcType=VARCHAR}, #{item.accelResn,jdbcType=VARCHAR}, #{item.checkDig,jdbcType=VARCHAR}, 
+        #{item.issueNbr,jdbcType=VARCHAR}, #{item.firstInt,jdbcType=VARCHAR}, #{item.mthInstl,jdbcType=VARCHAR}, 
+        #{item.instlCnt,jdbcType=VARCHAR}, #{item.lstInstdy,jdbcType=VARCHAR}, #{item.mthInt,jdbcType=VARCHAR}, 
+        #{item.mthPpl,jdbcType=VARCHAR}, #{item.nbrMths,jdbcType=VARCHAR}, #{item.origPurch,jdbcType=VARCHAR}, 
+        #{item.remPpl,jdbcType=VARCHAR}, #{item.origInt,jdbcType=VARCHAR}, #{item.totIntCg,jdbcType=VARCHAR}, 
+        #{item.remInt,jdbcType=VARCHAR}, #{item.origFee,jdbcType=VARCHAR}, #{item.remFee,jdbcType=VARCHAR}, 
+        #{item.transSrc,jdbcType=VARCHAR}, #{item.statusPre,jdbcType=VARCHAR}, #{item.status,jdbcType=VARCHAR}, 
+        #{item.statusDay,jdbcType=VARCHAR}, #{item.commAmt,jdbcType=VARCHAR}, #{item.employee,jdbcType=VARCHAR}, 
+        #{item.feeFlag,jdbcType=VARCHAR}, #{item.addrType,jdbcType=VARCHAR}, #{item.credpId,jdbcType=VARCHAR}, 
+        #{item.mpType,jdbcType=VARCHAR}, #{item.pauseNbrs,jdbcType=VARCHAR}, #{item.delayMth,jdbcType=VARCHAR}, 
+        #{item.currNum,jdbcType=VARCHAR}, #{item.addr1,jdbcType=VARCHAR}, #{item.addr2,jdbcType=VARCHAR}, 
+        #{item.addr3,jdbcType=VARCHAR}, #{item.addr4,jdbcType=VARCHAR}, #{item.resPpl,jdbcType=VARCHAR}, 
+        #{item.interMths,jdbcType=VARCHAR}, #{item.paycfDay,jdbcType=VARCHAR}, #{item.remark,jdbcType=VARCHAR}, 
+        #{item.inpSrc,jdbcType=VARCHAR}, #{item.priDldy,jdbcType=VARCHAR}, #{item.dlyDays,jdbcType=VARCHAR}, 
+        #{item.etlDay,jdbcType=VARCHAR}, #{item.deduFee,jdbcType=VARCHAR}, #{item.appSdayNew,jdbcType=VARCHAR}, 
+        #{item.markDay,jdbcType=VARCHAR}, #{item.remFeey,jdbcType=VARCHAR}, #{item.sublmtNbr,jdbcType=VARCHAR}, 
+        #{item.feePcnt,jdbcType=VARCHAR}, #{item.feeMths,jdbcType=VARCHAR}, #{item.chanelno,jdbcType=VARCHAR}, 
+        #{item.mpIrrYr,jdbcType=VARCHAR}, #{item.remark2,jdbcType=VARCHAR}, #{item.remPply,jdbcType=VARCHAR}, 
+        #{item.resPply,jdbcType=VARCHAR}, #{item.dlyFlag,jdbcType=VARCHAR}, #{item.fstInstdy,jdbcType=VARCHAR}, 
+        #{item.mthFee,jdbcType=VARCHAR}, #{item.clpps,jdbcType=VARCHAR}, #{item.relMerch,jdbcType=VARCHAR}, 
+        #{item.feePcntNew,jdbcType=VARCHAR}, #{item.calName,jdbcType=VARCHAR}, #{item.remInty,jdbcType=VARCHAR}, 
+        #{item.contractno,jdbcType=VARCHAR}, #{item.merchFee,jdbcType=VARCHAR}, #{item.instIntfe,jdbcType=VARCHAR}, 
+        #{item.txtDate,jdbcType=DATE})
+    </foreach>
+  </insert>
+</mapper>

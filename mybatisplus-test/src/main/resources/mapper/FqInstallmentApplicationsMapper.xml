@@ -1,0 +1,1352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chen.mapper.FqInstallmentApplicationsMapper">
+  <resultMap id="BaseResultMap" type="com.chen.entity.FqInstallmentApplications">
+    <!--@mbg.generated-->
+    <!--@Table fq_installment_applications-->
+    <id column="fq_installment_applications_id" jdbcType="VARCHAR" property="fqInstallmentApplicationsId" />
+    <result column="bank" jdbcType="VARCHAR" property="bank" />
+    <result column="card_nbr" jdbcType="VARCHAR" property="cardNbr" />
+    <result column="custr_nbr" jdbcType="VARCHAR" property="custrNbr" />
+    <result column="account" jdbcType="VARCHAR" property="account" />
+    <result column="card_bin" jdbcType="VARCHAR" property="cardBin" />
+    <result column="inp_src" jdbcType="VARCHAR" property="inpSrc" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="hmtel_area" jdbcType="VARCHAR" property="hmtelArea" />
+    <result column="home_phone" jdbcType="VARCHAR" property="homePhone" />
+    <result column="mo_phone" jdbcType="VARCHAR" property="moPhone" />
+    <result column="cardholder" jdbcType="VARCHAR" property="cardholder" />
+    <result column="expiry_Dte" jdbcType="VARCHAR" property="expiryDte" />
+    <result column="reserve1" jdbcType="VARCHAR" property="reserve1" />
+    <result column="merchant" jdbcType="VARCHAR" property="merchant" />
+    <result column="micro_no" jdbcType="VARCHAR" property="microNo" />
+    <result column="prod_id" jdbcType="VARCHAR" property="prodId" />
+    <result column="prod_nbr" jdbcType="VARCHAR" property="prodNbr" />
+    <result column="mp_amt" jdbcType="VARCHAR" property="mpAmt" />
+    <result column="mp_instl" jdbcType="VARCHAR" property="mpInstl" />
+    <result column="nbr_mths" jdbcType="VARCHAR" property="nbrMths" />
+    <result column="agent_flag" jdbcType="VARCHAR" property="agentFlag" />
+    <result column="agent_idno" jdbcType="VARCHAR" property="agentIdno" />
+    <result column="agent_idtp" jdbcType="VARCHAR" property="agentIdtp" />
+    <result column="agent_name" jdbcType="VARCHAR" property="agentName" />
+    <result column="agent_phon" jdbcType="VARCHAR" property="agentPhon" />
+    <result column="addr_flag" jdbcType="VARCHAR" property="addrFlag" />
+    <result column="addr_type" jdbcType="VARCHAR" property="addrType" />
+    <result column="address1" jdbcType="VARCHAR" property="address1" />
+    <result column="address2" jdbcType="VARCHAR" property="address2" />
+    <result column="address3" jdbcType="VARCHAR" property="address3" />
+    <result column="address4" jdbcType="VARCHAR" property="address4" />
+    <result column="address5" jdbcType="VARCHAR" property="address5" />
+    <result column="post_code" jdbcType="VARCHAR" property="postCode" />
+    <result column="int_rate" jdbcType="VARCHAR" property="intRate" />
+    <result column="invoc_flag" jdbcType="VARCHAR" property="invocFlag" />
+    <result column="invoc_head" jdbcType="VARCHAR" property="invocHead" />
+    <result column="mpau_sts" jdbcType="VARCHAR" property="mpauSts" />
+    <result column="status_day" jdbcType="VARCHAR" property="statusDay" />
+    <result column="deccan_rea" jdbcType="VARCHAR" property="deccanRea" />
+    <result column="deccan_cd" jdbcType="VARCHAR" property="deccanCd" />
+    <result column="auth_code" jdbcType="VARCHAR" property="authCode" />
+    <result column="auth_day" jdbcType="VARCHAR" property="authDay" />
+    <result column="auth_emp" jdbcType="VARCHAR" property="authEmp" />
+    <result column="auth_time" jdbcType="VARCHAR" property="authTime" />
+    <result column="auth_resp" jdbcType="VARCHAR" property="authResp" />
+    <result column="match_day" jdbcType="VARCHAR" property="matchDay" />
+    <result column="preauth_dy" jdbcType="VARCHAR" property="preauthDy" />
+    <result column="preauth_tm" jdbcType="VARCHAR" property="preauthTm" />
+    <result column="inp_empno" jdbcType="VARCHAR" property="inpEmpno" />
+    <result column="check_demo" jdbcType="VARCHAR" property="checkDemo" />
+    <result column="orig_nbr" jdbcType="VARCHAR" property="origNbr" />
+    <result column="message" jdbcType="VARCHAR" property="message" />
+    <result column="curr_num" jdbcType="VARCHAR" property="currNum" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="dedu_fee" jdbcType="VARCHAR" property="deduFee" />
+    <result column="app_sday_new" jdbcType="VARCHAR" property="appSdayNew" />
+    <result column="clpps" jdbcType="VARCHAR" property="clpps" />
+    <result column="merch_pcnt" jdbcType="VARCHAR" property="merchPcnt" />
+    <result column="merch_fee" jdbcType="VARCHAR" property="merchFee" />
+    <result column="sublmt_nbr" jdbcType="VARCHAR" property="sublmtNbr" />
+    <result column="chanelno" jdbcType="VARCHAR" property="chanelno" />
+    <result column="ip_addr" jdbcType="VARCHAR" property="ipAddr" />
+    <result column="mac_addr" jdbcType="VARCHAR" property="macAddr" />
+    <result column="phone_nbr" jdbcType="VARCHAR" property="phoneNbr" />
+    <result column="devce_addr" jdbcType="VARCHAR" property="devceAddr" />
+    <result column="busns_acc" jdbcType="VARCHAR" property="busnsAcc" />
+    <result column="busns_name" jdbcType="VARCHAR" property="busnsName" />
+    <result column="fee_pcnt" jdbcType="VARCHAR" property="feePcnt" />
+    <result column="feepcnt_pn" jdbcType="VARCHAR" property="feepcntPn" />
+    <result column="cal_name" jdbcType="VARCHAR" property="calName" />
+    <result column="contractno" jdbcType="VARCHAR" property="contractno" />
+    <result column="bal_mp_amt" jdbcType="VARCHAR" property="balMpAmt" />
+    <result column="bal_mp_amt_flg" jdbcType="VARCHAR" property="balMpAmtFlg" />
+    <result column="txt_date" jdbcType="DATE" property="txtDate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    fq_installment_applications_id, bank, card_nbr, custr_nbr, account, card_bin, inp_src, 
+    `name`, hmtel_area, home_phone, mo_phone, cardholder, expiry_Dte, reserve1, merchant, 
+    micro_no, prod_id, prod_nbr, mp_amt, mp_instl, nbr_mths, agent_flag, agent_idno, 
+    agent_idtp, agent_name, agent_phon, addr_flag, addr_type, address1, address2, address3, 
+    address4, address5, post_code, int_rate, invoc_flag, invoc_head, mpau_sts, status_day, 
+    deccan_rea, deccan_cd, auth_code, auth_day, auth_emp, auth_time, auth_resp, match_day, 
+    preauth_dy, preauth_tm, inp_empno, check_demo, orig_nbr, message, curr_num, remark, 
+    dedu_fee, app_sday_new, clpps, merch_pcnt, merch_fee, sublmt_nbr, chanelno, ip_addr, 
+    mac_addr, phone_nbr, devce_addr, busns_acc, busns_name, fee_pcnt, feepcnt_pn, cal_name, 
+    contractno, bal_mp_amt, bal_mp_amt_flg, txt_date
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from fq_installment_applications
+    where fq_installment_applications_id = #{fqInstallmentApplicationsId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from fq_installment_applications
+    where fq_installment_applications_id = #{fqInstallmentApplicationsId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.chen.entity.FqInstallmentApplications">
+    <!--@mbg.generated-->
+    insert into fq_installment_applications (fq_installment_applications_id, bank, 
+      card_nbr, custr_nbr, account, 
+      card_bin, inp_src, `name`, 
+      hmtel_area, home_phone, mo_phone, 
+      cardholder, expiry_Dte, reserve1, 
+      merchant, micro_no, prod_id, 
+      prod_nbr, mp_amt, mp_instl, 
+      nbr_mths, agent_flag, agent_idno, 
+      agent_idtp, agent_name, agent_phon, 
+      addr_flag, addr_type, address1, 
+      address2, address3, address4, 
+      address5, post_code, int_rate, 
+      invoc_flag, invoc_head, mpau_sts, 
+      status_day, deccan_rea, deccan_cd, 
+      auth_code, auth_day, auth_emp, 
+      auth_time, auth_resp, match_day, 
+      preauth_dy, preauth_tm, inp_empno, 
+      check_demo, orig_nbr, message, 
+      curr_num, remark, dedu_fee, 
+      app_sday_new, clpps, merch_pcnt, 
+      merch_fee, sublmt_nbr, chanelno, 
+      ip_addr, mac_addr, phone_nbr, 
+      devce_addr, busns_acc, busns_name, 
+      fee_pcnt, feepcnt_pn, cal_name, 
+      contractno, bal_mp_amt, bal_mp_amt_flg, 
+      txt_date)
+    values (#{fqInstallmentApplicationsId,jdbcType=VARCHAR}, #{bank,jdbcType=VARCHAR}, 
+      #{cardNbr,jdbcType=VARCHAR}, #{custrNbr,jdbcType=VARCHAR}, #{account,jdbcType=VARCHAR}, 
+      #{cardBin,jdbcType=VARCHAR}, #{inpSrc,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{hmtelArea,jdbcType=VARCHAR}, #{homePhone,jdbcType=VARCHAR}, #{moPhone,jdbcType=VARCHAR}, 
+      #{cardholder,jdbcType=VARCHAR}, #{expiryDte,jdbcType=VARCHAR}, #{reserve1,jdbcType=VARCHAR}, 
+      #{merchant,jdbcType=VARCHAR}, #{microNo,jdbcType=VARCHAR}, #{prodId,jdbcType=VARCHAR}, 
+      #{prodNbr,jdbcType=VARCHAR}, #{mpAmt,jdbcType=VARCHAR}, #{mpInstl,jdbcType=VARCHAR}, 
+      #{nbrMths,jdbcType=VARCHAR}, #{agentFlag,jdbcType=VARCHAR}, #{agentIdno,jdbcType=VARCHAR}, 
+      #{agentIdtp,jdbcType=VARCHAR}, #{agentName,jdbcType=VARCHAR}, #{agentPhon,jdbcType=VARCHAR}, 
+      #{addrFlag,jdbcType=VARCHAR}, #{addrType,jdbcType=VARCHAR}, #{address1,jdbcType=VARCHAR}, 
+      #{address2,jdbcType=VARCHAR}, #{address3,jdbcType=VARCHAR}, #{address4,jdbcType=VARCHAR}, 
+      #{address5,jdbcType=VARCHAR}, #{postCode,jdbcType=VARCHAR}, #{intRate,jdbcType=VARCHAR}, 
+      #{invocFlag,jdbcType=VARCHAR}, #{invocHead,jdbcType=VARCHAR}, #{mpauSts,jdbcType=VARCHAR}, 
+      #{statusDay,jdbcType=VARCHAR}, #{deccanRea,jdbcType=VARCHAR}, #{deccanCd,jdbcType=VARCHAR}, 
+      #{authCode,jdbcType=VARCHAR}, #{authDay,jdbcType=VARCHAR}, #{authEmp,jdbcType=VARCHAR}, 
+      #{authTime,jdbcType=VARCHAR}, #{authResp,jdbcType=VARCHAR}, #{matchDay,jdbcType=VARCHAR}, 
+      #{preauthDy,jdbcType=VARCHAR}, #{preauthTm,jdbcType=VARCHAR}, #{inpEmpno,jdbcType=VARCHAR}, 
+      #{checkDemo,jdbcType=VARCHAR}, #{origNbr,jdbcType=VARCHAR}, #{message,jdbcType=VARCHAR}, 
+      #{currNum,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{deduFee,jdbcType=VARCHAR}, 
+      #{appSdayNew,jdbcType=VARCHAR}, #{clpps,jdbcType=VARCHAR}, #{merchPcnt,jdbcType=VARCHAR}, 
+      #{merchFee,jdbcType=VARCHAR}, #{sublmtNbr,jdbcType=VARCHAR}, #{chanelno,jdbcType=VARCHAR}, 
+      #{ipAddr,jdbcType=VARCHAR}, #{macAddr,jdbcType=VARCHAR}, #{phoneNbr,jdbcType=VARCHAR}, 
+      #{devceAddr,jdbcType=VARCHAR}, #{busnsAcc,jdbcType=VARCHAR}, #{busnsName,jdbcType=VARCHAR}, 
+      #{feePcnt,jdbcType=VARCHAR}, #{feepcntPn,jdbcType=VARCHAR}, #{calName,jdbcType=VARCHAR}, 
+      #{contractno,jdbcType=VARCHAR}, #{balMpAmt,jdbcType=VARCHAR}, #{balMpAmtFlg,jdbcType=VARCHAR}, 
+      #{txtDate,jdbcType=DATE})
+  </insert>
+  <insert id="insertSelective" parameterType="com.chen.entity.FqInstallmentApplications">
+    <!--@mbg.generated-->
+    insert into fq_installment_applications
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fqInstallmentApplicationsId != null">
+        fq_installment_applications_id,
+      </if>
+      <if test="bank != null">
+        bank,
+      </if>
+      <if test="cardNbr != null">
+        card_nbr,
+      </if>
+      <if test="custrNbr != null">
+        custr_nbr,
+      </if>
+      <if test="account != null">
+        account,
+      </if>
+      <if test="cardBin != null">
+        card_bin,
+      </if>
+      <if test="inpSrc != null">
+        inp_src,
+      </if>
+      <if test="name != null">
+        `name`,
+      </if>
+      <if test="hmtelArea != null">
+        hmtel_area,
+      </if>
+      <if test="homePhone != null">
+        home_phone,
+      </if>
+      <if test="moPhone != null">
+        mo_phone,
+      </if>
+      <if test="cardholder != null">
+        cardholder,
+      </if>
+      <if test="expiryDte != null">
+        expiry_Dte,
+      </if>
+      <if test="reserve1 != null">
+        reserve1,
+      </if>
+      <if test="merchant != null">
+        merchant,
+      </if>
+      <if test="microNo != null">
+        micro_no,
+      </if>
+      <if test="prodId != null">
+        prod_id,
+      </if>
+      <if test="prodNbr != null">
+        prod_nbr,
+      </if>
+      <if test="mpAmt != null">
+        mp_amt,
+      </if>
+      <if test="mpInstl != null">
+        mp_instl,
+      </if>
+      <if test="nbrMths != null">
+        nbr_mths,
+      </if>
+      <if test="agentFlag != null">
+        agent_flag,
+      </if>
+      <if test="agentIdno != null">
+        agent_idno,
+      </if>
+      <if test="agentIdtp != null">
+        agent_idtp,
+      </if>
+      <if test="agentName != null">
+        agent_name,
+      </if>
+      <if test="agentPhon != null">
+        agent_phon,
+      </if>
+      <if test="addrFlag != null">
+        addr_flag,
+      </if>
+      <if test="addrType != null">
+        addr_type,
+      </if>
+      <if test="address1 != null">
+        address1,
+      </if>
+      <if test="address2 != null">
+        address2,
+      </if>
+      <if test="address3 != null">
+        address3,
+      </if>
+      <if test="address4 != null">
+        address4,
+      </if>
+      <if test="address5 != null">
+        address5,
+      </if>
+      <if test="postCode != null">
+        post_code,
+      </if>
+      <if test="intRate != null">
+        int_rate,
+      </if>
+      <if test="invocFlag != null">
+        invoc_flag,
+      </if>
+      <if test="invocHead != null">
+        invoc_head,
+      </if>
+      <if test="mpauSts != null">
+        mpau_sts,
+      </if>
+      <if test="statusDay != null">
+        status_day,
+      </if>
+      <if test="deccanRea != null">
+        deccan_rea,
+      </if>
+      <if test="deccanCd != null">
+        deccan_cd,
+      </if>
+      <if test="authCode != null">
+        auth_code,
+      </if>
+      <if test="authDay != null">
+        auth_day,
+      </if>
+      <if test="authEmp != null">
+        auth_emp,
+      </if>
+      <if test="authTime != null">
+        auth_time,
+      </if>
+      <if test="authResp != null">
+        auth_resp,
+      </if>
+      <if test="matchDay != null">
+        match_day,
+      </if>
+      <if test="preauthDy != null">
+        preauth_dy,
+      </if>
+      <if test="preauthTm != null">
+        preauth_tm,
+      </if>
+      <if test="inpEmpno != null">
+        inp_empno,
+      </if>
+      <if test="checkDemo != null">
+        check_demo,
+      </if>
+      <if test="origNbr != null">
+        orig_nbr,
+      </if>
+      <if test="message != null">
+        message,
+      </if>
+      <if test="currNum != null">
+        curr_num,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="deduFee != null">
+        dedu_fee,
+      </if>
+      <if test="appSdayNew != null">
+        app_sday_new,
+      </if>
+      <if test="clpps != null">
+        clpps,
+      </if>
+      <if test="merchPcnt != null">
+        merch_pcnt,
+      </if>
+      <if test="merchFee != null">
+        merch_fee,
+      </if>
+      <if test="sublmtNbr != null">
+        sublmt_nbr,
+      </if>
+      <if test="chanelno != null">
+        chanelno,
+      </if>
+      <if test="ipAddr != null">
+        ip_addr,
+      </if>
+      <if test="macAddr != null">
+        mac_addr,
+      </if>
+      <if test="phoneNbr != null">
+        phone_nbr,
+      </if>
+      <if test="devceAddr != null">
+        devce_addr,
+      </if>
+      <if test="busnsAcc != null">
+        busns_acc,
+      </if>
+      <if test="busnsName != null">
+        busns_name,
+      </if>
+      <if test="feePcnt != null">
+        fee_pcnt,
+      </if>
+      <if test="feepcntPn != null">
+        feepcnt_pn,
+      </if>
+      <if test="calName != null">
+        cal_name,
+      </if>
+      <if test="contractno != null">
+        contractno,
+      </if>
+      <if test="balMpAmt != null">
+        bal_mp_amt,
+      </if>
+      <if test="balMpAmtFlg != null">
+        bal_mp_amt_flg,
+      </if>
+      <if test="txtDate != null">
+        txt_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fqInstallmentApplicationsId != null">
+        #{fqInstallmentApplicationsId,jdbcType=VARCHAR},
+      </if>
+      <if test="bank != null">
+        #{bank,jdbcType=VARCHAR},
+      </if>
+      <if test="cardNbr != null">
+        #{cardNbr,jdbcType=VARCHAR},
+      </if>
+      <if test="custrNbr != null">
+        #{custrNbr,jdbcType=VARCHAR},
+      </if>
+      <if test="account != null">
+        #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="cardBin != null">
+        #{cardBin,jdbcType=VARCHAR},
+      </if>
+      <if test="inpSrc != null">
+        #{inpSrc,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="hmtelArea != null">
+        #{hmtelArea,jdbcType=VARCHAR},
+      </if>
+      <if test="homePhone != null">
+        #{homePhone,jdbcType=VARCHAR},
+      </if>
+      <if test="moPhone != null">
+        #{moPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="cardholder != null">
+        #{cardholder,jdbcType=VARCHAR},
+      </if>
+      <if test="expiryDte != null">
+        #{expiryDte,jdbcType=VARCHAR},
+      </if>
+      <if test="reserve1 != null">
+        #{reserve1,jdbcType=VARCHAR},
+      </if>
+      <if test="merchant != null">
+        #{merchant,jdbcType=VARCHAR},
+      </if>
+      <if test="microNo != null">
+        #{microNo,jdbcType=VARCHAR},
+      </if>
+      <if test="prodId != null">
+        #{prodId,jdbcType=VARCHAR},
+      </if>
+      <if test="prodNbr != null">
+        #{prodNbr,jdbcType=VARCHAR},
+      </if>
+      <if test="mpAmt != null">
+        #{mpAmt,jdbcType=VARCHAR},
+      </if>
+      <if test="mpInstl != null">
+        #{mpInstl,jdbcType=VARCHAR},
+      </if>
+      <if test="nbrMths != null">
+        #{nbrMths,jdbcType=VARCHAR},
+      </if>
+      <if test="agentFlag != null">
+        #{agentFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="agentIdno != null">
+        #{agentIdno,jdbcType=VARCHAR},
+      </if>
+      <if test="agentIdtp != null">
+        #{agentIdtp,jdbcType=VARCHAR},
+      </if>
+      <if test="agentName != null">
+        #{agentName,jdbcType=VARCHAR},
+      </if>
+      <if test="agentPhon != null">
+        #{agentPhon,jdbcType=VARCHAR},
+      </if>
+      <if test="addrFlag != null">
+        #{addrFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="addrType != null">
+        #{addrType,jdbcType=VARCHAR},
+      </if>
+      <if test="address1 != null">
+        #{address1,jdbcType=VARCHAR},
+      </if>
+      <if test="address2 != null">
+        #{address2,jdbcType=VARCHAR},
+      </if>
+      <if test="address3 != null">
+        #{address3,jdbcType=VARCHAR},
+      </if>
+      <if test="address4 != null">
+        #{address4,jdbcType=VARCHAR},
+      </if>
+      <if test="address5 != null">
+        #{address5,jdbcType=VARCHAR},
+      </if>
+      <if test="postCode != null">
+        #{postCode,jdbcType=VARCHAR},
+      </if>
+      <if test="intRate != null">
+        #{intRate,jdbcType=VARCHAR},
+      </if>
+      <if test="invocFlag != null">
+        #{invocFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="invocHead != null">
+        #{invocHead,jdbcType=VARCHAR},
+      </if>
+      <if test="mpauSts != null">
+        #{mpauSts,jdbcType=VARCHAR},
+      </if>
+      <if test="statusDay != null">
+        #{statusDay,jdbcType=VARCHAR},
+      </if>
+      <if test="deccanRea != null">
+        #{deccanRea,jdbcType=VARCHAR},
+      </if>
+      <if test="deccanCd != null">
+        #{deccanCd,jdbcType=VARCHAR},
+      </if>
+      <if test="authCode != null">
+        #{authCode,jdbcType=VARCHAR},
+      </if>
+      <if test="authDay != null">
+        #{authDay,jdbcType=VARCHAR},
+      </if>
+      <if test="authEmp != null">
+        #{authEmp,jdbcType=VARCHAR},
+      </if>
+      <if test="authTime != null">
+        #{authTime,jdbcType=VARCHAR},
+      </if>
+      <if test="authResp != null">
+        #{authResp,jdbcType=VARCHAR},
+      </if>
+      <if test="matchDay != null">
+        #{matchDay,jdbcType=VARCHAR},
+      </if>
+      <if test="preauthDy != null">
+        #{preauthDy,jdbcType=VARCHAR},
+      </if>
+      <if test="preauthTm != null">
+        #{preauthTm,jdbcType=VARCHAR},
+      </if>
+      <if test="inpEmpno != null">
+        #{inpEmpno,jdbcType=VARCHAR},
+      </if>
+      <if test="checkDemo != null">
+        #{checkDemo,jdbcType=VARCHAR},
+      </if>
+      <if test="origNbr != null">
+        #{origNbr,jdbcType=VARCHAR},
+      </if>
+      <if test="message != null">
+        #{message,jdbcType=VARCHAR},
+      </if>
+      <if test="currNum != null">
+        #{currNum,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="deduFee != null">
+        #{deduFee,jdbcType=VARCHAR},
+      </if>
+      <if test="appSdayNew != null">
+        #{appSdayNew,jdbcType=VARCHAR},
+      </if>
+      <if test="clpps != null">
+        #{clpps,jdbcType=VARCHAR},
+      </if>
+      <if test="merchPcnt != null">
+        #{merchPcnt,jdbcType=VARCHAR},
+      </if>
+      <if test="merchFee != null">
+        #{merchFee,jdbcType=VARCHAR},
+      </if>
+      <if test="sublmtNbr != null">
+        #{sublmtNbr,jdbcType=VARCHAR},
+      </if>
+      <if test="chanelno != null">
+        #{chanelno,jdbcType=VARCHAR},
+      </if>
+      <if test="ipAddr != null">
+        #{ipAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="macAddr != null">
+        #{macAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="phoneNbr != null">
+        #{phoneNbr,jdbcType=VARCHAR},
+      </if>
+      <if test="devceAddr != null">
+        #{devceAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="busnsAcc != null">
+        #{busnsAcc,jdbcType=VARCHAR},
+      </if>
+      <if test="busnsName != null">
+        #{busnsName,jdbcType=VARCHAR},
+      </if>
+      <if test="feePcnt != null">
+        #{feePcnt,jdbcType=VARCHAR},
+      </if>
+      <if test="feepcntPn != null">
+        #{feepcntPn,jdbcType=VARCHAR},
+      </if>
+      <if test="calName != null">
+        #{calName,jdbcType=VARCHAR},
+      </if>
+      <if test="contractno != null">
+        #{contractno,jdbcType=VARCHAR},
+      </if>
+      <if test="balMpAmt != null">
+        #{balMpAmt,jdbcType=VARCHAR},
+      </if>
+      <if test="balMpAmtFlg != null">
+        #{balMpAmtFlg,jdbcType=VARCHAR},
+      </if>
+      <if test="txtDate != null">
+        #{txtDate,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.chen.entity.FqInstallmentApplications">
+    <!--@mbg.generated-->
+    update fq_installment_applications
+    <set>
+      <if test="bank != null">
+        bank = #{bank,jdbcType=VARCHAR},
+      </if>
+      <if test="cardNbr != null">
+        card_nbr = #{cardNbr,jdbcType=VARCHAR},
+      </if>
+      <if test="custrNbr != null">
+        custr_nbr = #{custrNbr,jdbcType=VARCHAR},
+      </if>
+      <if test="account != null">
+        account = #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="cardBin != null">
+        card_bin = #{cardBin,jdbcType=VARCHAR},
+      </if>
+      <if test="inpSrc != null">
+        inp_src = #{inpSrc,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        `name` = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="hmtelArea != null">
+        hmtel_area = #{hmtelArea,jdbcType=VARCHAR},
+      </if>
+      <if test="homePhone != null">
+        home_phone = #{homePhone,jdbcType=VARCHAR},
+      </if>
+      <if test="moPhone != null">
+        mo_phone = #{moPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="cardholder != null">
+        cardholder = #{cardholder,jdbcType=VARCHAR},
+      </if>
+      <if test="expiryDte != null">
+        expiry_Dte = #{expiryDte,jdbcType=VARCHAR},
+      </if>
+      <if test="reserve1 != null">
+        reserve1 = #{reserve1,jdbcType=VARCHAR},
+      </if>
+      <if test="merchant != null">
+        merchant = #{merchant,jdbcType=VARCHAR},
+      </if>
+      <if test="microNo != null">
+        micro_no = #{microNo,jdbcType=VARCHAR},
+      </if>
+      <if test="prodId != null">
+        prod_id = #{prodId,jdbcType=VARCHAR},
+      </if>
+      <if test="prodNbr != null">
+        prod_nbr = #{prodNbr,jdbcType=VARCHAR},
+      </if>
+      <if test="mpAmt != null">
+        mp_amt = #{mpAmt,jdbcType=VARCHAR},
+      </if>
+      <if test="mpInstl != null">
+        mp_instl = #{mpInstl,jdbcType=VARCHAR},
+      </if>
+      <if test="nbrMths != null">
+        nbr_mths = #{nbrMths,jdbcType=VARCHAR},
+      </if>
+      <if test="agentFlag != null">
+        agent_flag = #{agentFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="agentIdno != null">
+        agent_idno = #{agentIdno,jdbcType=VARCHAR},
+      </if>
+      <if test="agentIdtp != null">
+        agent_idtp = #{agentIdtp,jdbcType=VARCHAR},
+      </if>
+      <if test="agentName != null">
+        agent_name = #{agentName,jdbcType=VARCHAR},
+      </if>
+      <if test="agentPhon != null">
+        agent_phon = #{agentPhon,jdbcType=VARCHAR},
+      </if>
+      <if test="addrFlag != null">
+        addr_flag = #{addrFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="addrType != null">
+        addr_type = #{addrType,jdbcType=VARCHAR},
+      </if>
+      <if test="address1 != null">
+        address1 = #{address1,jdbcType=VARCHAR},
+      </if>
+      <if test="address2 != null">
+        address2 = #{address2,jdbcType=VARCHAR},
+      </if>
+      <if test="address3 != null">
+        address3 = #{address3,jdbcType=VARCHAR},
+      </if>
+      <if test="address4 != null">
+        address4 = #{address4,jdbcType=VARCHAR},
+      </if>
+      <if test="address5 != null">
+        address5 = #{address5,jdbcType=VARCHAR},
+      </if>
+      <if test="postCode != null">
+        post_code = #{postCode,jdbcType=VARCHAR},
+      </if>
+      <if test="intRate != null">
+        int_rate = #{intRate,jdbcType=VARCHAR},
+      </if>
+      <if test="invocFlag != null">
+        invoc_flag = #{invocFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="invocHead != null">
+        invoc_head = #{invocHead,jdbcType=VARCHAR},
+      </if>
+      <if test="mpauSts != null">
+        mpau_sts = #{mpauSts,jdbcType=VARCHAR},
+      </if>
+      <if test="statusDay != null">
+        status_day = #{statusDay,jdbcType=VARCHAR},
+      </if>
+      <if test="deccanRea != null">
+        deccan_rea = #{deccanRea,jdbcType=VARCHAR},
+      </if>
+      <if test="deccanCd != null">
+        deccan_cd = #{deccanCd,jdbcType=VARCHAR},
+      </if>
+      <if test="authCode != null">
+        auth_code = #{authCode,jdbcType=VARCHAR},
+      </if>
+      <if test="authDay != null">
+        auth_day = #{authDay,jdbcType=VARCHAR},
+      </if>
+      <if test="authEmp != null">
+        auth_emp = #{authEmp,jdbcType=VARCHAR},
+      </if>
+      <if test="authTime != null">
+        auth_time = #{authTime,jdbcType=VARCHAR},
+      </if>
+      <if test="authResp != null">
+        auth_resp = #{authResp,jdbcType=VARCHAR},
+      </if>
+      <if test="matchDay != null">
+        match_day = #{matchDay,jdbcType=VARCHAR},
+      </if>
+      <if test="preauthDy != null">
+        preauth_dy = #{preauthDy,jdbcType=VARCHAR},
+      </if>
+      <if test="preauthTm != null">
+        preauth_tm = #{preauthTm,jdbcType=VARCHAR},
+      </if>
+      <if test="inpEmpno != null">
+        inp_empno = #{inpEmpno,jdbcType=VARCHAR},
+      </if>
+      <if test="checkDemo != null">
+        check_demo = #{checkDemo,jdbcType=VARCHAR},
+      </if>
+      <if test="origNbr != null">
+        orig_nbr = #{origNbr,jdbcType=VARCHAR},
+      </if>
+      <if test="message != null">
+        message = #{message,jdbcType=VARCHAR},
+      </if>
+      <if test="currNum != null">
+        curr_num = #{currNum,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="deduFee != null">
+        dedu_fee = #{deduFee,jdbcType=VARCHAR},
+      </if>
+      <if test="appSdayNew != null">
+        app_sday_new = #{appSdayNew,jdbcType=VARCHAR},
+      </if>
+      <if test="clpps != null">
+        clpps = #{clpps,jdbcType=VARCHAR},
+      </if>
+      <if test="merchPcnt != null">
+        merch_pcnt = #{merchPcnt,jdbcType=VARCHAR},
+      </if>
+      <if test="merchFee != null">
+        merch_fee = #{merchFee,jdbcType=VARCHAR},
+      </if>
+      <if test="sublmtNbr != null">
+        sublmt_nbr = #{sublmtNbr,jdbcType=VARCHAR},
+      </if>
+      <if test="chanelno != null">
+        chanelno = #{chanelno,jdbcType=VARCHAR},
+      </if>
+      <if test="ipAddr != null">
+        ip_addr = #{ipAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="macAddr != null">
+        mac_addr = #{macAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="phoneNbr != null">
+        phone_nbr = #{phoneNbr,jdbcType=VARCHAR},
+      </if>
+      <if test="devceAddr != null">
+        devce_addr = #{devceAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="busnsAcc != null">
+        busns_acc = #{busnsAcc,jdbcType=VARCHAR},
+      </if>
+      <if test="busnsName != null">
+        busns_name = #{busnsName,jdbcType=VARCHAR},
+      </if>
+      <if test="feePcnt != null">
+        fee_pcnt = #{feePcnt,jdbcType=VARCHAR},
+      </if>
+      <if test="feepcntPn != null">
+        feepcnt_pn = #{feepcntPn,jdbcType=VARCHAR},
+      </if>
+      <if test="calName != null">
+        cal_name = #{calName,jdbcType=VARCHAR},
+      </if>
+      <if test="contractno != null">
+        contractno = #{contractno,jdbcType=VARCHAR},
+      </if>
+      <if test="balMpAmt != null">
+        bal_mp_amt = #{balMpAmt,jdbcType=VARCHAR},
+      </if>
+      <if test="balMpAmtFlg != null">
+        bal_mp_amt_flg = #{balMpAmtFlg,jdbcType=VARCHAR},
+      </if>
+      <if test="txtDate != null">
+        txt_date = #{txtDate,jdbcType=DATE},
+      </if>
+    </set>
+    where fq_installment_applications_id = #{fqInstallmentApplicationsId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.chen.entity.FqInstallmentApplications">
+    <!--@mbg.generated-->
+    update fq_installment_applications
+    set bank = #{bank,jdbcType=VARCHAR},
+      card_nbr = #{cardNbr,jdbcType=VARCHAR},
+      custr_nbr = #{custrNbr,jdbcType=VARCHAR},
+      account = #{account,jdbcType=VARCHAR},
+      card_bin = #{cardBin,jdbcType=VARCHAR},
+      inp_src = #{inpSrc,jdbcType=VARCHAR},
+      `name` = #{name,jdbcType=VARCHAR},
+      hmtel_area = #{hmtelArea,jdbcType=VARCHAR},
+      home_phone = #{homePhone,jdbcType=VARCHAR},
+      mo_phone = #{moPhone,jdbcType=VARCHAR},
+      cardholder = #{cardholder,jdbcType=VARCHAR},
+      expiry_Dte = #{expiryDte,jdbcType=VARCHAR},
+      reserve1 = #{reserve1,jdbcType=VARCHAR},
+      merchant = #{merchant,jdbcType=VARCHAR},
+      micro_no = #{microNo,jdbcType=VARCHAR},
+      prod_id = #{prodId,jdbcType=VARCHAR},
+      prod_nbr = #{prodNbr,jdbcType=VARCHAR},
+      mp_amt = #{mpAmt,jdbcType=VARCHAR},
+      mp_instl = #{mpInstl,jdbcType=VARCHAR},
+      nbr_mths = #{nbrMths,jdbcType=VARCHAR},
+      agent_flag = #{agentFlag,jdbcType=VARCHAR},
+      agent_idno = #{agentIdno,jdbcType=VARCHAR},
+      agent_idtp = #{agentIdtp,jdbcType=VARCHAR},
+      agent_name = #{agentName,jdbcType=VARCHAR},
+      agent_phon = #{agentPhon,jdbcType=VARCHAR},
+      addr_flag = #{addrFlag,jdbcType=VARCHAR},
+      addr_type = #{addrType,jdbcType=VARCHAR},
+      address1 = #{address1,jdbcType=VARCHAR},
+      address2 = #{address2,jdbcType=VARCHAR},
+      address3 = #{address3,jdbcType=VARCHAR},
+      address4 = #{address4,jdbcType=VARCHAR},
+      address5 = #{address5,jdbcType=VARCHAR},
+      post_code = #{postCode,jdbcType=VARCHAR},
+      int_rate = #{intRate,jdbcType=VARCHAR},
+      invoc_flag = #{invocFlag,jdbcType=VARCHAR},
+      invoc_head = #{invocHead,jdbcType=VARCHAR},
+      mpau_sts = #{mpauSts,jdbcType=VARCHAR},
+      status_day = #{statusDay,jdbcType=VARCHAR},
+      deccan_rea = #{deccanRea,jdbcType=VARCHAR},
+      deccan_cd = #{deccanCd,jdbcType=VARCHAR},
+      auth_code = #{authCode,jdbcType=VARCHAR},
+      auth_day = #{authDay,jdbcType=VARCHAR},
+      auth_emp = #{authEmp,jdbcType=VARCHAR},
+      auth_time = #{authTime,jdbcType=VARCHAR},
+      auth_resp = #{authResp,jdbcType=VARCHAR},
+      match_day = #{matchDay,jdbcType=VARCHAR},
+      preauth_dy = #{preauthDy,jdbcType=VARCHAR},
+      preauth_tm = #{preauthTm,jdbcType=VARCHAR},
+      inp_empno = #{inpEmpno,jdbcType=VARCHAR},
+      check_demo = #{checkDemo,jdbcType=VARCHAR},
+      orig_nbr = #{origNbr,jdbcType=VARCHAR},
+      message = #{message,jdbcType=VARCHAR},
+      curr_num = #{currNum,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      dedu_fee = #{deduFee,jdbcType=VARCHAR},
+      app_sday_new = #{appSdayNew,jdbcType=VARCHAR},
+      clpps = #{clpps,jdbcType=VARCHAR},
+      merch_pcnt = #{merchPcnt,jdbcType=VARCHAR},
+      merch_fee = #{merchFee,jdbcType=VARCHAR},
+      sublmt_nbr = #{sublmtNbr,jdbcType=VARCHAR},
+      chanelno = #{chanelno,jdbcType=VARCHAR},
+      ip_addr = #{ipAddr,jdbcType=VARCHAR},
+      mac_addr = #{macAddr,jdbcType=VARCHAR},
+      phone_nbr = #{phoneNbr,jdbcType=VARCHAR},
+      devce_addr = #{devceAddr,jdbcType=VARCHAR},
+      busns_acc = #{busnsAcc,jdbcType=VARCHAR},
+      busns_name = #{busnsName,jdbcType=VARCHAR},
+      fee_pcnt = #{feePcnt,jdbcType=VARCHAR},
+      feepcnt_pn = #{feepcntPn,jdbcType=VARCHAR},
+      cal_name = #{calName,jdbcType=VARCHAR},
+      contractno = #{contractno,jdbcType=VARCHAR},
+      bal_mp_amt = #{balMpAmt,jdbcType=VARCHAR},
+      bal_mp_amt_flg = #{balMpAmtFlg,jdbcType=VARCHAR},
+      txt_date = #{txtDate,jdbcType=DATE}
+    where fq_installment_applications_id = #{fqInstallmentApplicationsId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateBatch" parameterType="java.util.List">
+    <!--@mbg.generated-->
+    update fq_installment_applications
+    <trim prefix="set" suffixOverrides=",">
+      <trim prefix="bank = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.bank,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="card_nbr = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.cardNbr,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="custr_nbr = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.custrNbr,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="account = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.account,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="card_bin = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.cardBin,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="inp_src = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.inpSrc,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="`name` = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.name,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="hmtel_area = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.hmtelArea,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="home_phone = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.homePhone,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="mo_phone = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.moPhone,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="cardholder = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.cardholder,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="expiry_Dte = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.expiryDte,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="reserve1 = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.reserve1,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="merchant = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.merchant,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="micro_no = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.microNo,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="prod_id = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.prodId,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="prod_nbr = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.prodNbr,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="mp_amt = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.mpAmt,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="mp_instl = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.mpInstl,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="nbr_mths = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.nbrMths,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="agent_flag = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.agentFlag,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="agent_idno = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.agentIdno,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="agent_idtp = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.agentIdtp,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="agent_name = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.agentName,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="agent_phon = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.agentPhon,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="addr_flag = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.addrFlag,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="addr_type = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.addrType,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="address1 = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.address1,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="address2 = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.address2,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="address3 = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.address3,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="address4 = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.address4,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="address5 = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.address5,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="post_code = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.postCode,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="int_rate = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.intRate,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="invoc_flag = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.invocFlag,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="invoc_head = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.invocHead,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="mpau_sts = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.mpauSts,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="status_day = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.statusDay,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="deccan_rea = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.deccanRea,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="deccan_cd = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.deccanCd,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="auth_code = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.authCode,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="auth_day = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.authDay,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="auth_emp = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.authEmp,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="auth_time = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.authTime,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="auth_resp = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.authResp,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="match_day = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.matchDay,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="preauth_dy = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.preauthDy,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="preauth_tm = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.preauthTm,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="inp_empno = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.inpEmpno,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="check_demo = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.checkDemo,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="orig_nbr = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.origNbr,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="message = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.message,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="curr_num = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.currNum,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="remark = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.remark,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="dedu_fee = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.deduFee,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="app_sday_new = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.appSdayNew,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="clpps = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.clpps,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="merch_pcnt = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.merchPcnt,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="merch_fee = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.merchFee,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="sublmt_nbr = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.sublmtNbr,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="chanelno = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.chanelno,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="ip_addr = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.ipAddr,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="mac_addr = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.macAddr,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="phone_nbr = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.phoneNbr,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="devce_addr = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.devceAddr,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="busns_acc = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.busnsAcc,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="busns_name = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.busnsName,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="fee_pcnt = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.feePcnt,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="feepcnt_pn = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.feepcntPn,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="cal_name = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.calName,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="contractno = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.contractno,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="bal_mp_amt = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.balMpAmt,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="bal_mp_amt_flg = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.balMpAmtFlg,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="txt_date = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when fq_installment_applications_id = #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR} then #{item.txtDate,jdbcType=DATE}
+        </foreach>
+      </trim>
+    </trim>
+    where fq_installment_applications_id in
+    <foreach close=")" collection="list" item="item" open="(" separator=", ">
+      #{item.fqInstallmentApplicationsId,jdbcType=VARCHAR}
+    </foreach>
+  </update>
+  <insert id="batchInsert" parameterType="map">
+    <!--@mbg.generated-->
+    insert into fq_installment_applications
+    (fq_installment_applications_id, bank, card_nbr, custr_nbr, account, card_bin, inp_src, 
+      `name`, hmtel_area, home_phone, mo_phone, cardholder, expiry_Dte, reserve1, merchant, 
+      micro_no, prod_id, prod_nbr, mp_amt, mp_instl, nbr_mths, agent_flag, agent_idno, 
+      agent_idtp, agent_name, agent_phon, addr_flag, addr_type, address1, address2, address3, 
+      address4, address5, post_code, int_rate, invoc_flag, invoc_head, mpau_sts, status_day, 
+      deccan_rea, deccan_cd, auth_code, auth_day, auth_emp, auth_time, auth_resp, match_day, 
+      preauth_dy, preauth_tm, inp_empno, check_demo, orig_nbr, message, curr_num, remark, 
+      dedu_fee, app_sday_new, clpps, merch_pcnt, merch_fee, sublmt_nbr, chanelno, ip_addr, 
+      mac_addr, phone_nbr, devce_addr, busns_acc, busns_name, fee_pcnt, feepcnt_pn, cal_name, 
+      contractno, bal_mp_amt, bal_mp_amt_flg, txt_date)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.fqInstallmentApplicationsId,jdbcType=VARCHAR}, #{item.bank,jdbcType=VARCHAR}, 
+        #{item.cardNbr,jdbcType=VARCHAR}, #{item.custrNbr,jdbcType=VARCHAR}, #{item.account,jdbcType=VARCHAR}, 
+        #{item.cardBin,jdbcType=VARCHAR}, #{item.inpSrc,jdbcType=VARCHAR}, #{item.name,jdbcType=VARCHAR}, 
+        #{item.hmtelArea,jdbcType=VARCHAR}, #{item.homePhone,jdbcType=VARCHAR}, #{item.moPhone,jdbcType=VARCHAR}, 
+        #{item.cardholder,jdbcType=VARCHAR}, #{item.expiryDte,jdbcType=VARCHAR}, #{item.reserve1,jdbcType=VARCHAR}, 
+        #{item.merchant,jdbcType=VARCHAR}, #{item.microNo,jdbcType=VARCHAR}, #{item.prodId,jdbcType=VARCHAR}, 
+        #{item.prodNbr,jdbcType=VARCHAR}, #{item.mpAmt,jdbcType=VARCHAR}, #{item.mpInstl,jdbcType=VARCHAR}, 
+        #{item.nbrMths,jdbcType=VARCHAR}, #{item.agentFlag,jdbcType=VARCHAR}, #{item.agentIdno,jdbcType=VARCHAR}, 
+        #{item.agentIdtp,jdbcType=VARCHAR}, #{item.agentName,jdbcType=VARCHAR}, #{item.agentPhon,jdbcType=VARCHAR}, 
+        #{item.addrFlag,jdbcType=VARCHAR}, #{item.addrType,jdbcType=VARCHAR}, #{item.address1,jdbcType=VARCHAR}, 
+        #{item.address2,jdbcType=VARCHAR}, #{item.address3,jdbcType=VARCHAR}, #{item.address4,jdbcType=VARCHAR}, 
+        #{item.address5,jdbcType=VARCHAR}, #{item.postCode,jdbcType=VARCHAR}, #{item.intRate,jdbcType=VARCHAR}, 
+        #{item.invocFlag,jdbcType=VARCHAR}, #{item.invocHead,jdbcType=VARCHAR}, #{item.mpauSts,jdbcType=VARCHAR}, 
+        #{item.statusDay,jdbcType=VARCHAR}, #{item.deccanRea,jdbcType=VARCHAR}, #{item.deccanCd,jdbcType=VARCHAR}, 
+        #{item.authCode,jdbcType=VARCHAR}, #{item.authDay,jdbcType=VARCHAR}, #{item.authEmp,jdbcType=VARCHAR}, 
+        #{item.authTime,jdbcType=VARCHAR}, #{item.authResp,jdbcType=VARCHAR}, #{item.matchDay,jdbcType=VARCHAR}, 
+        #{item.preauthDy,jdbcType=VARCHAR}, #{item.preauthTm,jdbcType=VARCHAR}, #{item.inpEmpno,jdbcType=VARCHAR}, 
+        #{item.checkDemo,jdbcType=VARCHAR}, #{item.origNbr,jdbcType=VARCHAR}, #{item.message,jdbcType=VARCHAR}, 
+        #{item.currNum,jdbcType=VARCHAR}, #{item.remark,jdbcType=VARCHAR}, #{item.deduFee,jdbcType=VARCHAR}, 
+        #{item.appSdayNew,jdbcType=VARCHAR}, #{item.clpps,jdbcType=VARCHAR}, #{item.merchPcnt,jdbcType=VARCHAR}, 
+        #{item.merchFee,jdbcType=VARCHAR}, #{item.sublmtNbr,jdbcType=VARCHAR}, #{item.chanelno,jdbcType=VARCHAR}, 
+        #{item.ipAddr,jdbcType=VARCHAR}, #{item.macAddr,jdbcType=VARCHAR}, #{item.phoneNbr,jdbcType=VARCHAR}, 
+        #{item.devceAddr,jdbcType=VARCHAR}, #{item.busnsAcc,jdbcType=VARCHAR}, #{item.busnsName,jdbcType=VARCHAR}, 
+        #{item.feePcnt,jdbcType=VARCHAR}, #{item.feepcntPn,jdbcType=VARCHAR}, #{item.calName,jdbcType=VARCHAR}, 
+        #{item.contractno,jdbcType=VARCHAR}, #{item.balMpAmt,jdbcType=VARCHAR}, #{item.balMpAmtFlg,jdbcType=VARCHAR}, 
+        #{item.txtDate,jdbcType=DATE})
+    </foreach>
+  </insert>
+</mapper>

@@ -1,54 +1,55 @@
 package com.chen.mapper;
 
+import com.chen.entity.FqRcvCardNoList;
 import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 @Mapper
-public interface EasyConfirmDataRepaymentMapper {
+public interface FqRcvCardNoListMapper {
     /**
      * delete by primary key
-     * @param easyConfirmDataRepaymentId primaryKey
+     * @param id primaryKey
      * @return deleteCount
      */
-    int deleteByPrimaryKey(Long easyConfirmDataRepaymentId);
+    int deleteByPrimaryKey(Integer id);
 
     /**
      * insert record to table
      * @param record the record
      * @return insert count
      */
-    int insert(EasyConfirmDataRepayment record);
+    int insert(FqRcvCardNoList record);
 
     /**
      * insert record to table selective
      * @param record the record
      * @return insert count
      */
-    int insertSelective(EasyConfirmDataRepayment record);
+    int insertSelective(FqRcvCardNoList record);
 
     /**
      * select by primary key
-     * @param easyConfirmDataRepaymentId primary key
+     * @param id primary key
      * @return object by primary key
      */
-    EasyConfirmDataRepayment selectByPrimaryKey(Long easyConfirmDataRepaymentId);
+    FqRcvCardNoList selectByPrimaryKey(Integer id);
 
     /**
      * update record selective
      * @param record the updated record
      * @return update count
      */
-    int updateByPrimaryKeySelective(EasyConfirmDataRepayment record);
+    int updateByPrimaryKeySelective(FqRcvCardNoList record);
 
     /**
      * update record
      * @param record the updated record
      * @return update count
      */
-    int updateByPrimaryKey(EasyConfirmDataRepayment record);
+    int updateByPrimaryKey(FqRcvCardNoList record);
 
-    int updateBatch(List<EasyConfirmDataRepayment> list);
+    int updateBatch(List<FqRcvCardNoList> list);
 
-    int batchInsert(@Param("list") List<EasyConfirmDataRepayment> list);
+    int batchInsert(@Param("list") List<FqRcvCardNoList> list);
 }
